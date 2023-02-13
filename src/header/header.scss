@@ -1,15 +1,10 @@
-@font-face {
-  font-family: 'frauleinregular';
-  src: url('frau-webfont.woff2') format('woff2'),
-    url('frau-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 .header {
   display: flex;
+  gap: 1rem;
   &__h1 {
+    display: flex;
     font-family: serif;
     color: #cc9f5b;
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
