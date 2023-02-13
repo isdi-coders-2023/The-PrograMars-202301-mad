@@ -1,3 +1,8 @@
+import { AppRouter } from '../app.router/approuter';
+import { Footer } from '../footer/footer';
+import { Header } from '../header/header';
+import { Nav } from '../nav/nav';
+
 export type MenuOption = {
   label: string;
   path: string;
@@ -15,7 +20,7 @@ function App() {
   return (
     <>
       <Header>
-        <Nav>{menuOptions}</Nav>
+        <Nav options={menuOptions}></Nav>
       </Header>
       <AppRouter menuOptions={menuOptions}></AppRouter>
       <Footer></Footer>
