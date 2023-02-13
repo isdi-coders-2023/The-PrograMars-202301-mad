@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'frauleinregular';
+  src: url('frau-webfont.woff2') format('woff2'),
+    url('frau-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.header {
+  display: flex;
+  &__h1 {
+    font-family: frauleinregular, serif;
+    color: #cc9f5b;
+  }
+}
