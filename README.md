@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+# Week 5 - Proyecto en equipo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tenéis que crear una SPA con varias páginas en React, gestionando el estado común con context + reducer. La app debe ser responsive (mobile + desktop) / mobile first.
 
-## Available Scripts
+Mínimo de páginas (vistas):
 
-In the project directory, you can run:
+- Lista API pública,
+- Lista API privada
+- Detail
+- Crear ítem
+- Modificar ítem
+- Página no encontrada
 
-### `npm start`
+- Alguna/s de ellas se tiene que cargar mediante lazy loading.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+La app se conectará a una **API pública** de vuestra elección y listará los elementos. En dicho listado tiene que haber paginación y también un filtro como mínimo. Filtrado en la misma página del listado. Al filtrar, no dirigimos al usuario a otra página, se queda en el listado y el listado cambia.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+A partir de este listado tendréis que crear otro listado conectado a una **API privada** (API local mediante JSON-server), donde implementaréis CRUD.
 
-### `npm test`
+- La creación y edición de item se hará con el mismo componente formulario reutilizado. La creación y la edición tienen que tener paths distintos en la URL. Cuando el usuario crea o edita, se le tiene que redirigir al listado y dar un feedback del resultado de la operación.
+- El botón de borrar tiene que estar en el mismo listado de items. Cuando el usuario borra, no se va a otra página, en el mismo listado en el que está debe desaparecer el ítem. También si queréis puede estar en la página de detalle.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+La interfaz debe dar feedback de cuando se está esperando una response de las APIs, y también debe gestionar los errores de éstas.
 
-### `npm run build`
+Requisitos:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Diseño en Figma
+- Listado de componentes y responsabilidades
+- Trello:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - Columnas Backlog, ToDo (Day/Sprint), In progress, Testing, Review/Que hice ayer y Done
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Hacer daily y coger acta:
 
-### `npm run eject`
+  - Qué tareas hice ayer
+  - Qué stoppers tuve
+  - Qué tareas haré hoy
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Hooks de git (huskies) y GitHub Actions
+- SonarCloud, mínimo de un escaneo diario
+- Mínimo de un approvals para poder mergear PR
+- Desplegada a Netlify / Vercel
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- HTML semántico (validado)
+- CSS con BEM (validado)
+- Testing con coverage. Todos los tipos de tests que hemos visto.
+- Optimizada (Lighthouse en Netlify / Vercel)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Challenge WeekEnd
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Seleccionar
+  - API: probarla -> consistencia / rendimiento / no pago
+  - Nombre de Grupo
+- Diseño en Figma
+- Listado de componentes y responsabilidades
+- Trello:
+  - Columnas Backlog, ToDo, In progress, Review/Testing y Done
 
-## Learn More
+Entregamos en Discord:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Datos API / Nombre
+- Link Figma
+- Link Trello
+- Link Listado componentes
