@@ -7,6 +7,7 @@ const Gallery = lazy(() => import('../gallery/page/gallery'));
 const NewItem = lazy(() => import('../new.item/page/new.item'));
 const Favorites = lazy(() => import('../favorites/page/favorites'));
 const About = lazy(() => import('../about/page/about'));
+const Error = lazy(() => import('../error/page/error'));
 
 type AppRouterProps = {
   menuOptions: MenuOption[];
@@ -25,10 +26,11 @@ export function AppRouter({ menuOptions }: AppRouterProps) {
           element={<Favorites></Favorites>}
         ></Route>
         <Route path={menuOptions[4].path} element={<About></About>}></Route>
+        <Route path={'/error'} element={<Error></Error>}></Route>
 
         <Route
           path={'*'}
-          element={<Navigate to={'/home'} replace={true} />}
+          element={<Navigate to={'/error'} replace={true} />}
         ></Route>
       </Routes>
     </Suspense>
