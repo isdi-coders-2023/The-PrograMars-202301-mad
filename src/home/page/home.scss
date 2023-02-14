@@ -1,0 +1,20 @@
+.home {
+  display: flex;
+  .about-text {
+    background-color: #cc9f5b;
+    color: white;
+    font-size: 1rem;
+  }
+  .quote {
+    &__src {
+    }
+    &__author {
+    }
+    &__exp {
+    }
+    &__read-more {
+    }
+    &__view {
+    }
+  }
+}
