@@ -12,6 +12,7 @@
 */
 * {
   margin: 0;
+  width: 100%;
 }
 /*
   3. Allow percentage-based heights in the application

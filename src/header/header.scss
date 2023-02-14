@@ -1,10 +1,16 @@
 .header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 1rem;
+  &__img {
+    width: 232px;
+    height: 57px;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+  }
   &__h1 {
-    display: flex;
-    font-family: serif;
-    color: #cc9f5b;
-    font-size: 2rem;
+    position: absolute;
+    top: 2000px;
   }
 }

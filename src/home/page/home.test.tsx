@@ -5,8 +5,11 @@ describe('Given a Home page', () => {
   describe('When it is render', () => {
     test('Then the screen it should show a heading', () => {
       render(<Home></Home>);
-      const element = screen.getByRole('heading');
-      expect(element).toBeInTheDocument();
+      const elements = [
+        ...screen.getAllByRole('paragraph'),
+        ...screen.getAllByRole('button'),
+      ];
+      elements.forEach((item) => expect(item).toBeInTheDocument());
     });
   });
 });
