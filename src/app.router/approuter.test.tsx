@@ -35,7 +35,7 @@ describe('Given AppRouter component', () => {
   describe('When the route is home', () => {
     test('Then we should navigate to home', async () => {
       const element = await screen.findAllByRole('paragraph');
-      expect(element).toBeInTheDocument();
+      element.forEach((item) => expect(item).toBeInTheDocument());
     });
   });
   describe('When the route is gallery', () => {
