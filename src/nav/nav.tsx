@@ -9,7 +9,7 @@ export function Nav({ options }: MenuProps) {
   return (
     <ul className="menu">
       {options.map((item) => (
-        <li className="menu__option">
+        <li key={item.label} className="menu__option">
           <Link to={item.path}>{item.label}</Link>
         </li>
       ))}

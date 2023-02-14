@@ -14,7 +14,7 @@ describe('Given the header component', () => {
         screen.getByRole('heading'),
         screen.getByRole('img'),
       ];
-      elements.map((item) => expect(item).toBeInTheDocument());
+      elements.forEach((item) => expect(item).toBeInTheDocument());
     });
   });
 });
