@@ -1,0 +1,23 @@
+.footer {
+  color: black;
+  background-color: inherit;
+  padding: 0.1rem;
+
+  &__img {
+    height: 1rem;
+  }
+
+  &__ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.4rem;
+    }
+  }
+}
