@@ -34,7 +34,7 @@ describe('Given AppRouter component', () => {
   });
   describe('When the route is home', () => {
     test('Then we should navigate to home', async () => {
-      const element = await screen.findByRole('heading', { name: 'Home' });
+      const element = await screen.findByRole('paragraph', { name: 'Home' });
       expect(element).toBeInTheDocument();
     });
   });
