@@ -1,3 +1,5 @@
+import './error.scss';
+
 export default function ErrorPage() {
   return (
     <main className="error">
