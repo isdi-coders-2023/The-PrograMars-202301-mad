@@ -10,4 +10,3 @@ describe('Given a Home page', () => {
     });
   });
 });
-a;
