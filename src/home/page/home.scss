@@ -2,31 +2,57 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('../../../public/assets/img/background-home.png');
   .about-text {
-    background-color: #cc9f5b;
-    opacity: 70%;
+    background-color: #cc9f5b81;
     color: white;
     font-size: 1rem;
     height: fit-content;
     border-radius: 12px;
     width: 90%;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
   }
-  .quote {
-    &__src {
-    }
-    &__author {
-    }
-    &__exp {
-      background-color: #141313;
-      opacity: 60%;
-      color: white;
-      font-size: 1rem;
+  .apod {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    .source {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      background-color: #0404045c;
       height: fit-content;
       border-radius: 12px;
+      width: 90%;
+      margin-top: 1rem;
+      padding: 0.5rem;
+      &__title {
+        font-size: 3rem;
+        color: #cc9f5b;
+        text-align: right;
+        text-transform: capitalize;
+      }
+      &__author {
+        font-size: 2.5rem;
+        color: #ffffff8f;
+        text-align: left;
+        text-transform: capitalize;
+      }
     }
-    &__read-more {
-    }
+  }
+  .quote {
+    overflow: hidden;
+    background-color: #0404045c;
+    color: white;
+    font-size: 2.5rem;
+    text-overflow: ellipsis;
+    height: fit-content;
+    border-radius: 12px;
+    width: 90%;
+    padding: 1.5rem;
+    height: 20rem;
     &__view {
     }
   }
