@@ -1,6 +1,8 @@
 .menu-container {
   position: relative;
   display: flex;
+  width: fit-content;
+  width: -moz-fit-content;
 }
 .menu {
   display: none;
