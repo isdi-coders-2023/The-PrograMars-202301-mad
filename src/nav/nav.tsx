@@ -15,7 +15,7 @@ export function Nav({ options }: MenuProps) {
   };
 
   return (
-    <div className="menu-container">
+    <nav className="menu-container">
       <i
         className="fa-solid fa-bars menu-mobile"
         role="button"
@@ -28,6 +28,6 @@ export function Nav({ options }: MenuProps) {
           </li>
         ))}
       </ul>
-    </div>
+    </nav>
   );
 }
