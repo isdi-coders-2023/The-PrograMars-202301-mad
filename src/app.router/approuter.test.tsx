@@ -10,6 +10,7 @@ const mockOptions: MenuOption[] = [
   { label: 'New Item', path: '/new-item' },
   { label: 'Favorites', path: '/favorites' },
   { label: 'About', path: '/about' },
+  { label: 'Error', path: '/error' },
 ];
 
 describe('Given AppRouter component', () => {
@@ -24,6 +25,8 @@ describe('Given AppRouter component', () => {
           '/new-item',
           '/favorites',
           '/about',
+          '/error',
+          '/abc',
         ]}
         initialIndex={counter}
       >
@@ -61,6 +64,20 @@ describe('Given AppRouter component', () => {
       const element = await screen.findByRole('heading', {
         name: 'About',
       });
+      expect(element).toBeInTheDocument();
+    });
+  });
+  describe('When the route is error', () => {
+    test('Then we should navigate to error', async () => {
+      const element = await screen.findByRole('heading');
+      const element2 = await screen.findByText(/ERROR: PAGE NOT FOUND/i);
+      expect(element).toBeInTheDocument();
+      expect(element2).toBeInTheDocument();
+    });
+  });
+  describe('When the route is non of the above', () => {
+    test('Then we should navigate to error', async () => {
+      const element = await screen.findByRole('heading');
       expect(element).toBeInTheDocument();
     });
   });
