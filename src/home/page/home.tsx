@@ -1,7 +1,9 @@
+import './home.scss';
+
 export default function Home() {
   return (
     <div className="home">
-      <p className="about-text" role="paragraph">
+      <p className="about -text" role="paragraph">
         This website will allow you to see all the Mars photos taken by the
         Curiosty NASA’s rover. Besides this, you can filter the images based on
         your preferred rover’s camera and you will be able to save all your
