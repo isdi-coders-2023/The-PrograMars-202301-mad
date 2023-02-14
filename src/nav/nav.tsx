@@ -16,7 +16,11 @@ export function Nav({ options }: MenuProps) {
 
   return (
     <div className="menu-container">
-      <i className="fa-solid fa-bars menu-mobile" onClick={handleClick}></i>
+      <i
+        className="fa-solid fa-bars menu-mobile"
+        role="button"
+        onClick={handleClick}
+      ></i>
       <ul className="menu">
         {options.map((item: MenuOption) => (
           <li key={item.label} className="menu__option" onClick={handleClick}>
