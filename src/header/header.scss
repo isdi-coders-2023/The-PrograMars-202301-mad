@@ -1,6 +1,10 @@
 .header {
   display: flex;
+  gap: 1rem;
   &__h1 {
+    display: flex;
+    font-family: serif;
     color: #cc9f5b;
+    font-size: 2rem;
   }
 }
