@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { MenuOption } from '../app/App';
 
-type MenuProps = {
+export type MenuProps = {
   options: MenuOption[];
 };
 
