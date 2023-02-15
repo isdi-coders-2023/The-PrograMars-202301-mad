@@ -4,9 +4,9 @@ import { Footer } from '../components/footer/footer';
 import { Header } from '../components/header/header';
 import App from './App';
 
-jest.mock('../header/header'); //Faltaintroducir Header folder
-jest.mock('../app.router/approuter'); //Falta introducir AppRouter folder
-jest.mock('../footer/footer'); //Falta introducir Footer folder
+jest.mock('../components/header/header.tsx');
+jest.mock('../components/app.router/approuter.tsx');
+jest.mock('../components/footer/footer.tsx');
 
 describe('Given App component', () => {
   beforeEach(() => {
