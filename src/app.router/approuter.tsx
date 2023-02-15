@@ -2,12 +2,12 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import { MenuOption } from '../app/App';
 import { lazy, Suspense } from 'react';
 
-const Home = lazy(() => import('../home/page/home'));
-const Gallery = lazy(() => import('../gallery/page/gallery'));
-const NewItem = lazy(() => import('../new.item/page/new.item'));
-const Favorites = lazy(() => import('../favorites/page/favorites'));
-const About = lazy(() => import('../about/page/about'));
-const Error = lazy(() => import('../error/page/error'));
+const Home = lazy(() => import('../pages/home'));
+const Gallery = lazy(() => import('../pages/gallery'));
+const NewItem = lazy(() => import('../pages/new.item'));
+const Favorites = lazy(() => import('../pages/favorites'));
+const About = lazy(() => import('../pages/about'));
+const Error = lazy(() => import('../pages/error'));
 
 type AppRouterProps = {
   menuOptions: MenuOption[];
