@@ -7,7 +7,7 @@ describe('Given a Home page', () => {
       render(<Home></Home>);
       const elements = [
         ...screen.getAllByRole('paragraph'),
-        ...screen.getAllByRole('button'),
+        ...screen.getAllByRole('link'),
       ];
       elements.forEach((item) => expect(item).toBeInTheDocument());
     });
