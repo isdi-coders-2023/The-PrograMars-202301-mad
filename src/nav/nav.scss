@@ -1,0 +1,48 @@
+.menu-container {
+  position: relative;
+  display: flex;
+  width: fit-content;
+  width: -moz-fit-content;
+}
+.menu {
+  display: none;
+}
+
+.menu-mobile {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  color: #000000;
+}
+
+.menu-mobile:hover {
+  color: #cc9f5b;
+}
+
+.menu--open {
+  position: absolute;
+  right: 10px;
+  top: 30px;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: #000000;
+  opacity: 0.4;
+  border-radius: 20px;
+  padding: 0.5rem;
+}
+
+.menu__option {
+  padding: 0px;
+
+  a {
+    text-decoration: none;
+    opacity: 1;
+    color: white;
+  }
+  a:hover {
+    color: #cc9f5b;
+  }
+}
