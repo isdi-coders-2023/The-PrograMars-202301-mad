@@ -33,8 +33,13 @@ export default function Home() {
           dusty galactic cirrus nebulae and the imprints of gravitational tidal
           interactions between the Large and Small Magellanic Clouds...
         </article>
-        <button className="quote__read-more">Read More</button>
-        <button className="quote__view">View HD</button>
+        <a
+          href="/assets/img/background-home.png"
+          className="quote__view"
+          target="_blank"
+        >
+          View HD
+        </a>
       </section>
     </div>
   );
