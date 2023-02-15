@@ -5,7 +5,7 @@ export default function Home() {
     <div className="home">
       <p className="about-text" role="paragraph">
         This website will allow you to see all the Mars photos taken by the
-        Curiosty NASA’s rover. Besides this, you can filter the images based on
+        Curiosty NASA’s rover.Besides this, you can filter the images based on
         your preferred rover’s camera and you will be able to save all your
         favorite images. There you will be able to give a name to each saved
         picture, allowing you to quickly find the ones you love the most.
@@ -15,9 +15,8 @@ export default function Home() {
           <p className="source__title" role="paragraph">
             magellanic clouds over hile
           </p>
-          <p className="source__author" role="paragraph"></p>
           <p className="source__author" role="paragraph">
-            Felipe Mac Auliffe López
+            felipe mac auliffe lópez
           </p>
         </article>
         <article className="quote" role="paragraph">
