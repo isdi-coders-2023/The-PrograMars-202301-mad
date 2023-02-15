@@ -1,11 +1,10 @@
 import { useState, useCallback } from 'react';
+import { PhotosApiRepo } from '../services/repository/nasa.api.repo';
 
 // import { MarsPhotoStructure, ProtoMarsPhotoStructure} from '../models/marsPhoto' Santiago lo está haciendo
 
-// import { NasaApiRepo } from '../service/nasa.api.repo' Semper
-
 export type UseMarsStructure = ReturnType<typeof usePhotos>;
-export function usePhotos(repo: NasaApiRepo) {
+export function usePhotos(repo: PhotosApiRepo) {
   const initialState: MarsPhotoStructure[] = [];
 
   const [photos, setPhotos] = useState(initialState);
@@ -16,7 +15,7 @@ export function usePhotos(repo: NasaApiRepo) {
     console.log(error.message);
   };
 
-  const loadPhoto = useCallback(async () => {
+  const loadPhotos = useCallback(async () => {
     try {
       const photos = await repo.loadPhotos();
       setPhotos(photos);
@@ -27,7 +26,7 @@ export function usePhotos(repo: NasaApiRepo) {
 
   const addPhoto = async (photo: ProtoMarsPhotoStructure) => {
     try {
-      const finalPhoto = await repo.createTask(photo);
+      const finalPhoto = await repo.createPhoto(photo);
       setPhotos([...photos, finalPhoto]);
     } catch (error) {
       handlerError(error as Error);
@@ -56,7 +55,7 @@ export function usePhotos(repo: NasaApiRepo) {
 
   return {
     photos,
-    loadPhoto,
+    loadPhotos,
     addPhoto,
     deletePhoto,
     updatePhoto,
