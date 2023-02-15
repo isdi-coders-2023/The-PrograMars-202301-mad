@@ -2,10 +2,10 @@ import { useState, useCallback } from 'react';
 
 // import { MarsPhotoStructure, ProtoMarsPhotoStructure} from '../models/marsPhoto' Santiago lo está haciendo
 
-// import { } from '../models/api.model'
+// import { NasaApiRepo } from '../service/nasa.api.repo' Semper
 
 export type UseMarsStructure = ReturnType<typeof usePhotos>;
-export function usePhotos(repo: PhotosApiRepo) {
+export function usePhotos(repo: NasaApiRepo) {
   const initialState: MarsPhotoStructure[] = [];
 
   const [photos, setPhotos] = useState(initialState);
