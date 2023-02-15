@@ -2,6 +2,7 @@ import { AppRouter } from '../app.router/approuter';
 import { Footer } from '../footer/footer';
 import { Header } from '../header/header';
 import { Nav } from '../nav/nav';
+import { Card } from '../card/card';
 
 export type MenuOption = {
   label: string;
@@ -14,16 +15,13 @@ const menuOptions: MenuOption[] = [
   { label: 'New Item', path: '/new-item' },
   { label: 'Favorites', path: '/favorites' },
   { label: 'About', path: '/about' },
+  { label: 'Card', path: '/card' },
 ];
 
 function App() {
   return (
     <>
-      <Header>
-        <Nav options={menuOptions}></Nav>
-      </Header>
-      <AppRouter menuOptions={menuOptions}></AppRouter>
-      <Footer></Footer>
+      <Card i={1}></Card>
     </>
   );
 }
