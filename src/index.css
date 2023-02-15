@@ -27,8 +27,14 @@ body {
   5. Improve text rendering
 */
 body {
+  position: relative;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  background-image: url('/public/assets/img/background-home.png');
+  background-size: 900vh;
+  object-fit: fill;
+  background-repeat: no-repeat;
+  background-position: 60%;
 }
 /*
   6. Improve media defaults

@@ -1,0 +1,66 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .about-text {
+    background-color: #cc9f5b81;
+    color: white;
+    height: fit-content;
+    border-radius: 12px;
+    width: 90%;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+  .apod {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    .source {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      background-color: #0404045c;
+      height: fit-content;
+      border-radius: 12px;
+      width: 90%;
+      margin-top: 1rem;
+      padding: 0.5rem;
+      &__title {
+        font-size: 3rem;
+        color: #cc9f5b;
+        text-align: right;
+        text-transform: capitalize;
+      }
+      &__author {
+        font-size: 2.5rem;
+        color: #ffffff8f;
+        text-align: left;
+        text-transform: capitalize;
+      }
+    }
+  }
+  .quote {
+    width: 90%;
+    background-color: #0404045c;
+    border-radius: 12px;
+    padding: 1.5rem;
+    height: 20rem;
+    overflow: scroll;
+    font-size: 2.5rem;
+    color: white;
+
+    &__view {
+      background-color: #cc9f5b;
+      border-radius: 10px;
+      padding: 2rem;
+      width: 90%;
+      font-size: 2.5rem;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+}

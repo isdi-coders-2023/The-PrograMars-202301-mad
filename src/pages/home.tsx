@@ -1,3 +1,5 @@
+import './home.scss';
+
 export default function Home() {
   return (
     <div className="home">
@@ -8,14 +10,16 @@ export default function Home() {
         favorite images. There you will be able to give a name to each saved
         picture, allowing you to quickly find the ones you love the most.
       </p>
-      <div className="quote">
-        <p className="quote__src" role="paragraph">
-          Magellanic Clouds over Chile
-        </p>
-        <p className="quote__author" role="paragraph">
-          Felipe Mac Auliffe López
-        </p>
-        <p className="quote__exp" role="paragraph">
+      <section className="apod">
+        <article className="source">
+          <p className="source__title" role="paragraph">
+            magellanic clouds over hile
+          </p>
+          <p className="source__author" role="paragraph">
+            Felipe Mac Auliffe López
+          </p>
+        </article>
+        <article className="quote" role="paragraph">
           The two prominent clouds in this Chilean Atacama Desert skyscape
           captured on January 21 actually lie beyond our Milky Way galaxy. Known
           as the Large and the Small Magellanic Clouds they are so named for the
@@ -27,11 +31,16 @@ export default function Home() {
           galaxies in their own right, they exhibit central barred structures in
           the deep wide-angle view. Wide and deep exposures also reveal faint
           dusty galactic cirrus nebulae and the imprints of gravitational tidal
-          interactions between the Large and Small Magellanic Clouds..
-        </p>
-        <button className="quote__read-more">Read More</button>
-        <button className="quote__view">View HD</button>
-      </div>
+          interactions between the Large and Small Magellanic Clouds...
+        </article>
+        <a
+          href="/assets/img/background-home.png"
+          className="quote__view"
+          target="_blank"
+        >
+          View HD
+        </a>
+      </section>
     </div>
   );
 }
