@@ -15,7 +15,6 @@ const menuOptions: MenuOption[] = [
   { label: 'New Item', path: '/new-item' },
   { label: 'Favorites', path: '/favorites' },
   { label: 'About', path: '/about' },
-  { label: 'Card', path: '/card' },
 ];
 
 function App() {
