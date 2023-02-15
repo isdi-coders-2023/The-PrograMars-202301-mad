@@ -19,7 +19,11 @@ const menuOptions: MenuOption[] = [
 function App() {
   return (
     <>
-      <Card i={1}></Card>
+      <Header>
+        <Nav options={menuOptions}></Nav>
+      </Header>
+      <AppRouter menuOptions={menuOptions}></AppRouter>
+      <Footer></Footer>
     </>
   );
 }
