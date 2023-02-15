@@ -15,6 +15,7 @@ export default function Home() {
           <p className="source__title" role="paragraph">
             magellanic clouds over hile
           </p>
+          <p className="source__author" role="paragraph"></p>
           <p className="source__author" role="paragraph">
             Felipe Mac Auliffe López
           </p>
