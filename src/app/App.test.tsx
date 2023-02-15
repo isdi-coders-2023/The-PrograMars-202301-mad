@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
+import { AppRouter } from '../components/app.router/approuter';
+import { Footer } from '../components/footer/footer';
+import { Header } from '../components/header/header';
 import App from './App';
-import { Header } from '../header/header';
-import { Footer } from '../footer/footer';
-import { AppRouter } from '../app.router/approuter';
 
 jest.mock('../header/header'); //Faltaintroducir Header folder
 jest.mock('../app.router/approuter'); //Falta introducir AppRouter folder

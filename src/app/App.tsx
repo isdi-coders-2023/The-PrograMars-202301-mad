@@ -1,7 +1,7 @@
-import { AppRouter } from '../app.router/approuter';
-import { Footer } from '../footer/footer';
-import { Header } from '../header/header';
-import { Nav } from '../nav/nav';
+import { AppRouter } from '../components/app.router/approuter';
+import { Footer } from '../components/footer/footer';
+import { Header } from '../components/header/header';
+import { Nav } from '../components/nav/nav';
 
 export type MenuOption = {
   label: string;
