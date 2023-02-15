@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Gallery from './page/gallery';
+import Gallery from './gallery';
 
 describe('Given Gallery component page', () => {
   describe('When it is rendering', () => {

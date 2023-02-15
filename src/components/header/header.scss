@@ -1,5 +1,7 @@
 .header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 1rem;
   &__img {
     width: 232px;
@@ -9,6 +11,6 @@
   }
   &__h1 {
     position: absolute;
-    top: 2000px;
+    top: -2000px;
   }
 }
