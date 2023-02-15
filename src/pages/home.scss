@@ -9,8 +9,9 @@
     border-radius: 12px;
     width: 90%;
     margin-top: 1rem;
-    padding: 0.5rem;
+    padding: 1.5rem;
     font-size: 1.5rem;
+    line-height: 2.5rem;
   }
   .apod {
     display: flex;
@@ -20,7 +21,7 @@
     .source {
       display: flex;
       flex-direction: column;
-      gap: 4rem;
+      gap: 1.5rem;
       background-color: #0404045c;
       height: fit-content;
       border-radius: 12px;
@@ -28,13 +29,13 @@
       margin-top: 1rem;
       padding: 0.5rem;
       &__title {
-        font-size: 3rem;
+        font-size: 1.5rem;
         color: #cc9f5b;
         text-align: right;
         text-transform: capitalize;
       }
       &__author {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         color: #ffffff8f;
         text-align: left;
         text-transform: capitalize;
@@ -45,10 +46,11 @@
     width: 90%;
     background-color: #0404045c;
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 2rem;
     height: 20rem;
     overflow: scroll;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
     color: white;
 
     &__view {
