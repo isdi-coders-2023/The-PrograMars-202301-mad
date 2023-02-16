@@ -4,7 +4,7 @@ import { NasaApiRepo } from '../services/repository/nasa.api.repo';
 // import { MarsPhotoStructure, ProtoMarsPhotoStructure} from '../models/marsPhoto' Santiago lo está haciendo
 
 export type UseMarsStructure = ReturnType<typeof usePhotos>;
-export function usePhotos(repo: PhotosApiRepo) {
+export function usePhotos(repo: NasaApiRepo) {
   const initialState: MarsPhotoStructure[] = [];
 
   const [photos, setPhotos] = useState(initialState);
