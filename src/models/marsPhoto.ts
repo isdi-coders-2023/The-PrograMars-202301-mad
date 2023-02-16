@@ -1,8 +1,9 @@
-type HasId = {
-  id: string;
-};
+// type HasId = {
+//   id: string;
+// };
 
-export type ProtoMarsPhotoStructure = {
+export type MarsPhotoStructure = {
+  id: string;
   sol: string;
   camera_id: string;
   camera_name: string;
@@ -20,7 +21,7 @@ export type ProtoMarsPhotoStructure = {
   favoriteName: string;
 };
 
-export type MarsPhotoStructure = HasId & ProtoMarsPhotoStructure;
+// export type MarsPhotoStructure = HasId & ProtoMarsPhotoStructure;
 
 export class MarsPhoto implements MarsPhotoStructure {
   id: string;
