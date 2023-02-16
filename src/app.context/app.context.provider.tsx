@@ -1,10 +1,10 @@
 import { useMemo } from 'react';
 import { usePhotos } from '../hooks/use.photo.mars';
-import { PhotosApiRepo } from '../services/repository/nasa.api.repo';
+import { NasaApiRepo } from '../services/repository/nasa.api.repo';
 import { AppContext } from './app.context';
 
 export function AppContextProvider({ children }: { children: JSX.Element }) {
-  const photosRepo = useMemo(() => new PhotosApiRepo(), []);
+  const photosRepo = useMemo(() => new NasaApiRepo(), []);
 
   const context = {
     ...usePhotos(photosRepo),
