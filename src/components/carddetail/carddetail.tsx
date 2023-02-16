@@ -42,7 +42,7 @@ export function CardDetail({ info }: CardDetailProps) {
         <div className="cardDetail__field-name">Status</div>
         <div className="cardDetail__field-value">{info.rover_status}</div>
         <span className="cardDetail__favorite">
-          {info.isFavorite ? (
+          {info.isFavorite! ? (
             <i
               className="heart fa-solid fa-heart"
               onClick={handleClickFavorite}

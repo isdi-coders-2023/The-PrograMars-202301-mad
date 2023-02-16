@@ -1,6 +1,7 @@
 import { CardDetail } from './carddetail';
 import { render, screen } from '@testing-library/react';
 import { MOCK_MARSPHOTOS } from '../../mocks/marsPhotos';
+import userEvent from '@testing-library/user-event';
 
 describe('Given CardDetail component', () => {
   describe('When it is render using index 0 of mock', () => {
