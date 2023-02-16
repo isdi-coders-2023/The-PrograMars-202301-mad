@@ -13,7 +13,7 @@ const mockPhoto: Photo = {
     full_name: 'Front Hazard Avoidance Camera',
   },
   img_src:
-    'http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB_486265257EDR_F0481570FHAZ00323M_.JPG',
+    'https://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB_486265257EDR_F0481570FHAZ00323M_.JPG',
   earth_date: '2015-05-30',
   rover: {
     id: 5,
