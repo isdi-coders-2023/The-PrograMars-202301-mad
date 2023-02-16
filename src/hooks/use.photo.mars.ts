@@ -1,7 +1,6 @@
 import { useState, useCallback } from 'react';
+import { MarsPhotoStructure } from '../models/marsPhoto';
 import { NasaApiRepo } from '../services/repository/nasa.api.repo';
-
-// import { MarsPhotoStructure, ProtoMarsPhotoStructure} from '../models/marsPhoto' Santiago lo está haciendo
 
 export type UseMarsStructure = ReturnType<typeof usePhotos>;
 export function usePhotos(repo: NasaApiRepo) {
