@@ -2,11 +2,11 @@ import './cardDetail.scss';
 import { SyntheticEvent } from 'react';
 import { MarsPhotoStructure } from '../../models/marsPhoto';
 
-interface cardDetailProps {
+interface CardDetailProps {
   info: MarsPhotoStructure;
 }
 
-export function CardDetail({ info }: cardDetailProps) {
+export function CardDetail({ info }: CardDetailProps) {
   const handleClickFavorite = (ev: SyntheticEvent) => {
     ev.preventDefault();
     const element = document.querySelector('.fa-heart') as HTMLElement;
