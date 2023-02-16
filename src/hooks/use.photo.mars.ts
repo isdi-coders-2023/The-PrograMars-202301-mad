@@ -24,40 +24,8 @@ export function usePhotos(repo: NasaApiRepo) {
     }
   }, [repo]);
 
-  const addPhoto = async (photo: ProtoMarsPhotoStructure) => {
-    try {
-      const finalPhoto = await repo.createPhoto(photo);
-      setPhotos([...photos, finalPhoto]);
-    } catch (error) {
-      handlerError(error as Error);
-    }
-  };
-
-  const deletePhoto = async (id: MarsPhotoStructure['id']) => {
-    try {
-      await repo.delete(id);
-      setPhotos(photos.filter((item) => item.id !== id));
-    } catch (error) {
-      handlerError(error as Error);
-    }
-  };
-
-  const updatePhoto = async (photo: MarsPhotoStructure) => {
-    try {
-      const finalPhoto = await repo.update(photo);
-      setPhotos(
-        photos.map((item) => (item.id === photo.id ? finalPhoto : item))
-      );
-    } catch (error) {
-      handlerError(error as Error);
-    }
-  };
-
   return {
     photos,
     loadPhotos,
-    addPhoto,
-    deletePhoto,
-    updatePhoto,
   };
 }
