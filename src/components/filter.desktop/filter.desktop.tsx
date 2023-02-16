@@ -20,8 +20,11 @@ export function Filter() {
               name="cam"
               id={item}
               value={'&camera=' + item}
+              key={item}
             ></input>
-            <label htmlFor={item}>{item.toUpperCase()}</label>
+            <label htmlFor={item} key={item}>
+              {item.toUpperCase()}
+            </label>
           </>
         );
       })}

@@ -3,9 +3,10 @@ import Gallery from './gallery';
 
 describe('Given Gallery component page', () => {
   describe('When it is rendering', () => {
-    test('Then it should be return a heading', () => {
+    test('Then it should be return an image', () => {
       render(<Gallery></Gallery>);
-      expect().toBeInTheDocument();
+      const element = screen.getByRole('img');
+      expect(element).toBeInTheDocument();
     });
   });
 });
