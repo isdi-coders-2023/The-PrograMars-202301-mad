@@ -1,9 +1,9 @@
 import { MarsPhotoStructure } from '../../models/marsPhoto';
 
-interface detailsProps {
+interface DetailProps {
   info: MarsPhotoStructure;
 }
 
-export default function Details({ info }: detailsProps) {
+export default function Details({ info }: DetailProps) {
   return <h2>Details</h2>;
 }
