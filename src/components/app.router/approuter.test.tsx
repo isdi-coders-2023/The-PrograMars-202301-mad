@@ -1,8 +1,8 @@
 /* eslint-disable testing-library/no-render-in-setup */
 import { render, screen } from '@testing-library/react';
-import { AppRouter } from './approuter';
 import { MemoryRouter as Router } from 'react-router-dom';
 import { MenuOption } from '../app/App';
+import { AppRouter } from './approuter';
 
 const mockOptions: MenuOption[] = [
   { label: 'Home', path: '/home' },
