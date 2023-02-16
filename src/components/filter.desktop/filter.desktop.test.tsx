@@ -1,5 +1,5 @@
 import { screen, render } from '@testing-library/react';
-import { Filter } from './filter';
+import { Filter } from './filter.desktop';
 
 describe('Given the component filter', () => {
   describe('When it is render', () => {

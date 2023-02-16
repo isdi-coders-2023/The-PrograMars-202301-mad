@@ -4,7 +4,7 @@ import { lazy, Suspense } from 'react';
 
 const Home = lazy(() => import('../../pages/homepage/homepage'));
 const Gallery = lazy(() => import('../../pages/gallery/gallery'));
-const NewItem = lazy(() => import('../../pages/new item/new.item'));
+const NewItem = lazy(() => import('../../pages/new.item/new.item'));
 const Favorites = lazy(() => import('../../pages/favorites/favorites'));
 const About = lazy(() => import('../../pages/about/about'));
 const Error = lazy(() => import('../../pages/error/error'));

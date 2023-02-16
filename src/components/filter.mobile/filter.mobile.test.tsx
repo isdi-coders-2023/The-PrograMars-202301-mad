@@ -1,15 +1,15 @@
 import { screen, render } from '@testing-library/react';
-import { Filter } from './filter';
+import { FilterMobile } from './filter.mobile';
 
 describe('Given the component filter', () => {
   describe('When it is render', () => {
     test('Then it should print in the screen the radio buttons', () => {
-      render(<Filter></Filter>);
-      const radioElement = screen.getAllByRole('radio');
-      const textElement = screen.getByRole('group');
+      render(<FilterMobile></FilterMobile>);
+      const selectElement = screen.getByRole('combobox');
+      const titleElement = screen.getByText(/choose a pet:/i);
 
-      expect(radioElement.length).toBe(7);
-      expect(textElement).toBeInTheDocument();
+      expect(selectElement).toBeInTheDocument();
+      expect(selectElement).toBeInTheDocument();
     });
   });
 });

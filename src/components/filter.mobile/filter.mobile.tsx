@@ -1,22 +1,16 @@
-export function Filter() {
+export function FilterMobile() {
   const cams = ['fhaz', 'rhaz', 'mast', 'chemcam', 'mahli', 'mardi', 'navcam'];
 
   return (
-    <fieldset>
-      <legend>Select camera</legend>
-      {cams.map((item) => {
-        return (
-          <>
-            <input
-              type="radio"
-              name="cam"
-              id={item}
-              value={'&camera=' + item}
-            ></input>
-            <label htmlFor={item}>{item.toUpperCase()}</label>
-          </>
-        );
-      })}
-    </fieldset>
+    <>
+      <label htmlFor={'camera-select'} id={'camera-select'}>
+        Choose a pet:
+      </label>
+      <select name="pets" id={'pet-select'}>
+        {cams.map((item) => (
+          <option value={item}>{item.toUpperCase()} </option>
+        ))}
+      </select>
+    </>
   );
 }
