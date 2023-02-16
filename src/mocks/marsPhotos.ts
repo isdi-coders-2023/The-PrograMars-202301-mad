@@ -9,7 +9,7 @@ export const MOCK_MARSPHOTOS: MarsPhotoStructure[] = [
     camera_rover_id: '5',
     camera_full_name: 'Front Hazard Avoidance Camera',
     img_src:
-      'http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB_486265257EDR_F0481570FHAZ00323M_.JPG',
+      'https://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB_486265257EDR_F0481570FHAZ00323M_.JPG',
     earth_date: '2015-05-30',
     rover_id: '5',
     rover_name: 'Curiosity',
@@ -28,7 +28,7 @@ export const MOCK_MARSPHOTOS: MarsPhotoStructure[] = [
     camera_rover_id: '5',
     camera_full_name: 'Front Hazard Avoidance Camera',
     img_src:
-      'http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FRB_486265257EDR_F0481570FHAZ00323M_.JPG',
+      'https://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FRB_486265257EDR_F0481570FHAZ00323M_.JPG',
     earth_date: '2015-05-30',
     rover_id: '5',
     rover_name: 'Curiosity',
@@ -47,7 +47,7 @@ export const MOCK_MARSPHOTOS: MarsPhotoStructure[] = [
     camera_rover_id: '5',
     camera_full_name: 'Rear Hazard Avoidance Camera',
     img_src:
-      'http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/rcam/RRB_486265291EDR_F0481570RHAZ00323M_.JPG',
+      'https://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/rcam/RRB_486265291EDR_F0481570RHAZ00323M_.JPG',
     earth_date: '2015-05-30',
     rover_id: '5',
     rover_name: 'Curiosity',
@@ -66,7 +66,7 @@ export const MOCK_MARSPHOTOS: MarsPhotoStructure[] = [
     camera_rover_id: '5',
     camera_full_name: 'Mast Camera',
     img_src:
-      'http://mars.jpl.nasa.gov/msl-raw-images/msss/01000/mcam/1000MR0044631300503690E01_DXXX.jpg',
+      'https://mars.jpl.nasa.gov/msl-raw-images/msss/01000/mcam/1000MR0044631300503690E01_DXXX.jpg',
     earth_date: '2015-05-30',
     rover_id: '5',
     rover_name: 'Curiosity',
@@ -78,5 +78,3 @@ export const MOCK_MARSPHOTOS: MarsPhotoStructure[] = [
     favoriteName: '',
   },
 ];
-
-// console.table(MOCK_MARSPHOTOS);
