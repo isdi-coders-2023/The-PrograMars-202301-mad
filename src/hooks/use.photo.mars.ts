@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { PhotosApiRepo } from '../services/repository/nasa.api.repo';
+import { NasaApiRepo } from '../services/repository/nasa.api.repo';
 
 // import { MarsPhotoStructure, ProtoMarsPhotoStructure} from '../models/marsPhoto' Santiago lo está haciendo
 
