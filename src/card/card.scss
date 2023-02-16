@@ -1,39 +1,47 @@
 .card {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 420px;
-  border: 1px solid lightgray;
-  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
-  border-radius: 15px;
-  font-family: sans-serif;
+  flex-direction: row;
+  // justify-content: space-between;
+
+  width: 250px;
+  border: 1px solid black;
+  box-shadow: 1px 1px 20px 1px #d3d3d3d1;
+  border-radius: 10px;
 }
-.card__title {
-  font-size: 24px;
-  padding: 10px 10px 0 10px;
+
+.card__picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .card__img {
-  padding: 10px;
-  width: 380px;
+  padding: 5px;
+  width: 250px;
+  border-radius: 20px;
 }
-.card__footer {
-  background: #6699ff;
-  border-radius: 0 0 15px 15px;
-  padding: 10px;
-  text-align: center;
+
+.card__field-name-value {
+  padding: 5px;
 }
-.footer__isFavorite,
-.footer__favoriteName {
-  text-decoration: none;
+
+.card__field-name,
+.card__id-name {
+  color: #cc9f5b;
+  font-size: 0.4rem;
+}
+
+.card__field-value,
+.card__favorite,
+.card__id-value {
   color: white;
+  font-size: 0.4rem;
+  text-transform: capitalize;
 }
-.footer__isFavorite,
-.footer__favoriteName:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  content: '';
+
+.fa-heart {
+  position: relative;
+  // top: 100px;
+  // right: 200px;
+  font-size: 0.5rem;
+  cursor: pointer;
 }

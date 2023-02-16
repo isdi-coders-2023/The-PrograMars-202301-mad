@@ -2,6 +2,7 @@ import { AppRouter } from '../app.router/approuter';
 import { Footer } from '../footer/footer';
 import { Header } from '../header/header';
 import { Nav } from '../nav/nav';
+import { Card } from '../card/card';
 
 export type MenuOption = {
   label: string;
@@ -19,11 +20,12 @@ const menuOptions: MenuOption[] = [
 function App() {
   return (
     <>
-      <Header>
+      <Card></Card>
+      {/* <Header>
         <Nav options={menuOptions}></Nav>
       </Header>
       <AppRouter menuOptions={menuOptions}></AppRouter>
-      <Footer></Footer>
+      <Footer></Footer> */}
     </>
   );
 }
