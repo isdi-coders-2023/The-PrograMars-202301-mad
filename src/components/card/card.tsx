@@ -1,5 +1,5 @@
 import './card.scss';
-import { MOCK_MARSPHOTOS } from '../mocks/marsPhotos';
+import { MOCK_MARSPHOTOS } from '../../../src/mocks/marsPhotos';
 import { SyntheticEvent } from 'react';
 
 export function Card() {
