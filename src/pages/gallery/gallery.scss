@@ -1,1 +1,8 @@
-
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  &__container {
+    overflow: scroll;
+  }
+}
