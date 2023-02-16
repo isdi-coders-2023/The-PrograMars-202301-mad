@@ -1,3 +1,4 @@
+import { Card } from '../../components/card/card';
 import { Filter } from '../../components/filter/filter';
 
 const mockNasa = {
@@ -29,7 +30,7 @@ export default function Gallery() {
     <>
       <Filter></Filter>
       {mockNasa.photos.map((item) => (
-        <Card info={item}></Card>
+        <Card info={item} key={item.sol}></Card>
       ))}
     </>
   );
