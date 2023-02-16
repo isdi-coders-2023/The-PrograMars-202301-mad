@@ -8,7 +8,7 @@ describe('Given the component filter', () => {
       const radioElement = screen.getAllByRole('radio');
       const textElement = screen.getByRole('group');
 
-      expect(radioElement.length).toBe(7);
+      expect(radioElement.length).toBe(8);
       expect(textElement).toBeInTheDocument();
     });
   });
