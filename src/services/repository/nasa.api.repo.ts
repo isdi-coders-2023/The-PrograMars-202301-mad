@@ -3,13 +3,13 @@
 
 import { RootObject } from '../../models/api.model';
 
-export interface PhotosApiRepoStructure {
+export interface NasaApiRepoStructure {
   loadPhotos(): Promise<RootObject>;
 }
 
 const apiKey = '&api_key=B2ll490zBp9I0mmMbiA98Ji4wZyA9qNv52KS2qjP';
 
-export class PhotosApiRepo {
+export class NasaApiRepo {
   url: string;
   constructor() {
     this.url =

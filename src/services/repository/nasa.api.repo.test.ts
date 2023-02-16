@@ -1,4 +1,4 @@
-import { PhotosApiRepo } from './nasa.api.repo';
+import { NasaApiRepo } from './nasa.api.repo';
 
 describe('Given the service Api repo class', () => {
   describe('When create a new object of the class', () => {
@@ -6,8 +6,8 @@ describe('Given the service Api repo class', () => {
       global.fetch = jest.fn().mockResolvedValue({
         json: jest.fn().mockResolvedValue({ photos: [] }),
       });
-      const repo = new PhotosApiRepo();
-      expect(repo).toBeInstanceOf(PhotosApiRepo);
+      const repo = new NasaApiRepo();
+      expect(repo).toBeInstanceOf(NasaApiRepo);
       const load = await repo.loadPhotos();
       expect(load).toEqual({ photos: [] });
     });
