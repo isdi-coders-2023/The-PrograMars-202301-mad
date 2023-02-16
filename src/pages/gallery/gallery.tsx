@@ -13,7 +13,7 @@ const mockNasa = {
         full_name: 'Mast Camera',
       },
       img_src:
-        'http://mars.jpl.nasa.gov/msl-raw-images/msss/01000/mcam/1000ML0044631200305217E01_DXXX.jpg',
+        'https://mars.jpl.nasa.gov/msl-raw-images/msss/01000/mcam/1000ML0044631200305217E01_DXXX.jpg',
       earth_date: '2015-05-30',
       rover: {
         id: 5,
