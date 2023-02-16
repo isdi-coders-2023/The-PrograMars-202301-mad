@@ -1,47 +1,53 @@
 .card {
+  position: absolute;
   display: flex;
   flex-direction: row;
-  // justify-content: space-between;
-
-  width: 250px;
+  width: 160px;
   border: 1px solid black;
   box-shadow: 1px 1px 20px 1px #d3d3d3d1;
   border-radius: 10px;
+
+  &__picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // align-content: center;
+  }
+
+  &__img {
+    padding: 2px;
+    width: 250px;
+    border-radius: 10px;
+  }
+
+  &__field-name-value {
+    padding: 1px;
+  }
+
+  &__field-name,
+  &__id-name {
+    color: #cc9f5b;
+    font-size: 0.3rem;
+  }
+  &__field-value,
+  &__favorite,
+  &__id-value {
+    color: black;
+    font-size: 0.3rem;
+    text-transform: capitalize;
+  }
+
+  &__id-name,
+  &__id-value {
+    text-align: center;
+  }
 }
 
-.card__picture {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.card__img {
-  padding: 5px;
-  width: 250px;
-  border-radius: 20px;
-}
-
-.card__field-name-value {
-  padding: 5px;
-}
-
-.card__field-name,
-.card__id-name {
-  color: #cc9f5b;
-  font-size: 0.4rem;
-}
-
-.card__field-value,
-.card__favorite,
-.card__id-value {
-  color: white;
-  font-size: 0.4rem;
-  text-transform: capitalize;
-}
-
-.fa-heart {
+.heart {
   position: relative;
-  // top: 100px;
-  // right: 200px;
-  font-size: 0.5rem;
+  top: -95px;
+  right: 20px;
+  font-size: 0.4rem;
   cursor: pointer;
+  color: red;
 }

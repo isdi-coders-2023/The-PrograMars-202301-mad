@@ -18,8 +18,8 @@ export function Card() {
           src={dataOrigin[0].img_src}
           alt={dataOrigin[0].camera_full_name}
         />
-        <div className="card__id-name">#</div>
-        <div className="card__id-value">{dataOrigin[0].id}</div>
+        <p className="card__id-name"># {dataOrigin[0].isFavorite.toString()}</p>
+        <p className="card__id-value">{dataOrigin[0].id}</p>
       </picture>
 
       <div className="card__field-name-value">
@@ -46,13 +46,16 @@ export function Card() {
 
         <div className="card__field-name">Status</div>
         <div className="card__field-value">{dataOrigin[0].rover_status}</div>
-        <div className="card__favorite">
+        <span className="card__favorite">
           {dataOrigin[0].isFavorite! ? (
-            <i className="fa-solid fa-heart" onClick={handleClickFavorite}></i>
+            <i
+              className="heart fa-solid fa-heart"
+              onClick={handleClickFavorite}
+            ></i>
           ) : (
-            <i className="fa-thin fa-heart" onClick={handleClickFavorite}></i>
+            <i className="heart fal fa-heart" onClick={handleClickFavorite}></i>
           )}
-        </div>
+        </span>
       </div>
     </article>
   );
