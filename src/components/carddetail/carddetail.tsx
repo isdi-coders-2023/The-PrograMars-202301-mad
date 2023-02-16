@@ -8,7 +8,6 @@ interface CardDetailProps {
 
 export function CardDetail({ info }: CardDetailProps) {
   const handleClickFavorite = (ev: SyntheticEvent) => {
-    // ev.preventDefault();
     const element = document.querySelector('.fa-heart') as HTMLElement;
     element?.classList.toggle('fa-solid');
   };
