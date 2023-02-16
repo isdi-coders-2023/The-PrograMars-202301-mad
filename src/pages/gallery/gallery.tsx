@@ -1,5 +1,5 @@
 import { Card } from '../../components/card/card';
-import { Filter } from '../../components/filter/filter';
+import { Filter } from '../../components/filter.desktop/filter.desktop';
 
 const mockNasa = {
   photos: [
