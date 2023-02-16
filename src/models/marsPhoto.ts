@@ -75,3 +75,4 @@ export class MarsPhoto implements MarsPhotoStructure {
     this.favoriteName = favoriteName;
   }
 }
+//Change for commit

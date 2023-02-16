@@ -19,7 +19,7 @@ describe('Given the class MarsPhoto', () => {
         '13',
         'APIPrivate',
         true,
-        '16'
+        '14'
       );
       expect(newMarsPhoto).toBeInstanceOf(MarsPhoto);
     });
