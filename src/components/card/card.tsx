@@ -1,10 +1,13 @@
 import './card.scss';
 import { MOCK_MARSPHOTOS } from '../../../src/mocks/marsPhotos';
 import { SyntheticEvent } from 'react';
+import { MarsPhotoStructure } from '../../models/marsPhoto';
 
-export function Card() {
-  const dataOrigin = MOCK_MARSPHOTOS;
+interface cardProps {
+  info: MarsPhotoStructure;
+}
 
+export function Card({ info }: cardProps) {
   const handleClickFavorite = (ev: SyntheticEvent) => {
     ev.preventDefault();
     const element = document.querySelector('.fa-heart') as HTMLElement;
@@ -15,39 +18,33 @@ export function Card() {
       <picture className="card__picture">
         <img
           className="card__img"
-          src={dataOrigin[0].img_src}
-          alt={dataOrigin[0].camera_full_name}
+          src={info.img_src}
+          alt={info.camera_full_name}
         />
-        <p className="card__id-name"># {dataOrigin[0].isFavorite.toString()}</p>
-        <p className="card__id-value">{dataOrigin[0].id}</p>
+        <p className="card__id-name"># {info.isFavorite.toString()}</p>
+        <p className="card__id-value">{info.id}</p>
       </picture>
 
       <div className="card__field-name-value">
         <div className="card__field-name">Date</div>
-        <div className="card__field-value">{dataOrigin[0].earth_date}</div>
+        <div className="card__field-value">{info.earth_date}</div>
 
         <div className="card__field-name">Rover's name</div>
-        <div className="card__field-value">{dataOrigin[0].rover_name}</div>
+        <div className="card__field-value">{info.rover_name}</div>
 
         <div className="card__field-name">Launch date</div>
-        <div className="card__field-value">
-          {dataOrigin[0].rover_launch_date}
-        </div>
+        <div className="card__field-value">{info.rover_launch_date}</div>
 
         <div className="card__field-name">Landing date</div>
-        <div className="card__field-value">
-          {dataOrigin[0].rover_landing_date}
-        </div>
+        <div className="card__field-value">{info.rover_landing_date}</div>
 
         <div className="card__field-name">Camera</div>
-        <div className="card__field-value">
-          {dataOrigin[0].camera_full_name}
-        </div>
+        <div className="card__field-value">{info.camera_full_name}</div>
 
         <div className="card__field-name">Status</div>
-        <div className="card__field-value">{dataOrigin[0].rover_status}</div>
+        <div className="card__field-value">{info.rover_status}</div>
         <span className="card__favorite">
-          {dataOrigin[0].isFavorite! ? (
+          {info.isFavorite! ? (
             <i
               className="heart fa-solid fa-heart"
               onClick={handleClickFavorite}
