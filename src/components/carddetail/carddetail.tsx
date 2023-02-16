@@ -1,4 +1,4 @@
-import './cardDetail.scss';
+import './carddetail.scss';
 import { SyntheticEvent } from 'react';
 import { MarsPhotoStructure } from '../../models/marsPhoto';
 
