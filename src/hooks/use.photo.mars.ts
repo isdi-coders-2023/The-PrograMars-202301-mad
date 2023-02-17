@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import { useCallback, useReducer } from 'react';
-import { RootObject } from '../models/api.model';
-=======
-import { useState, useCallback, useEffect } from 'react';
->>>>>>> feature/hooks
-import { MarsPhotoStructure } from '../models/marsPhoto';
+import { useCallback, useEffect } from 'react';
 import { photosReducer } from '../reducer/photos.reducer';
 import { NasaApiRepo } from '../services/repository/nasa.api.repo';
 import * as ac from '../reducer/photos.actions.creator';
