@@ -24,7 +24,6 @@ describe('Given a mocked repo show in a mocked html', () => {
 
   describe('When user click the button', () => {
     test('Then the load method is called', () => {
-      // expect(element).toBeInTheDocument();
       element = screen.getByRole('button');
       userEvent.click(element);
       expect(mockRepo.loadPhotos).toHaveBeenCalled();
