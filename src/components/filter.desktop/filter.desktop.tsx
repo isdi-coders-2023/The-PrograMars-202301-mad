@@ -4,6 +4,14 @@ export function Filter() {
   return (
     <fieldset>
       <legend>Select camera</legend>
+      <input
+        type="radio"
+        name="cam"
+        id="lasts photos"
+        value="&camera=lasts photos"
+        checked
+      ></input>
+      <label htmlFor="lasts photos">LASTS PHOTOS</label>
       {cams.map((item) => {
         return (
           <>
@@ -12,8 +20,11 @@ export function Filter() {
               name="cam"
               id={item}
               value={'&camera=' + item}
+              key={item}
             ></input>
-            <label htmlFor={item}>{item.toUpperCase()}</label>
+            <label htmlFor={item} key={item}>
+              {item.toUpperCase()}
+            </label>
           </>
         );
       })}
