@@ -1,10 +1,10 @@
 import { MarsPhotoStructure } from '../models/marsPhoto';
 import { rootObject } from './photos.actions';
-import { RootObject } from './photos.actions.creator';
+import { Action } from './photos.actions.creator';
 
 export function photosReducer(
   state: MarsPhotoStructure[],
-  action: RootObject
+  action: Action
 ): MarsPhotoStructure[] {
   switch (action.type) {
     case rootObject.load:

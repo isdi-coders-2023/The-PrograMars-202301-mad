@@ -1,7 +1,7 @@
 import { MarsPhotoStructure } from '../models/marsPhoto';
 import { rootObject } from './photos.actions';
 
-interface Action {
+export interface Action {
   type: string;
   payload?: any;
 }
@@ -11,9 +11,7 @@ export interface RootObject extends Action {
   payload: MarsPhotoStructure | MarsPhotoStructure[] | MarsPhotoStructure['id'];
 }
 
-export const loadPhotosCreator = (
-  payload: MarsPhotoStructure[]
-): RootObject => {
+export const loadPhotosCreator = (payload: MarsPhotoStructure[]): Action => {
   return {
     type: rootObject.load,
     payload,

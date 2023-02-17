@@ -35,8 +35,8 @@ export class NasaApiRepo {
       rover_launch_date: item.rover.launch_date,
       rover_status: item.rover.status,
       apiOrigin: 'APIPublic',
-      isFavorite: boolean,
-      favoriteName: string,
+      isFavorite: false,
+      favoriteName: '',
     }));
     return marsPhoto;
   }
