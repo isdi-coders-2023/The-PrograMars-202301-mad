@@ -1,5 +1,7 @@
 import { Card } from '../../components/card/card';
 import { Filter } from '../../components/filter.desktop/filter.desktop';
+import { FilterMobile } from '../filter.mobile/filter.mobile';
+import './gallery.scss';
 
 const mockNasa = {
   photos: [
@@ -30,6 +32,7 @@ export function Gallery() {
   return (
     <>
       <Filter></Filter>
+      <FilterMobile></FilterMobile>
       {mockNasa.photos.map((item) => (
         <Card info={item} key={item.id}></Card>
       ))}

@@ -1,8 +1,9 @@
+import './filter.desktop.scss';
 export function Filter() {
   const cams = ['fhaz', 'rhaz', 'mast', 'chemcam', 'mahli', 'mardi', 'navcam'];
 
   return (
-    <fieldset>
+    <fieldset className="mobile-hidden">
       <legend>Select camera</legend>
       <input
         type="radio"
