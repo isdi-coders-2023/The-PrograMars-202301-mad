@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { <Gallery></Gallery> } from './gallery';
+import GalleryPage from './gallery';
 
 describe('Given the new item page', () => {
   describe('When it is render', () => {
