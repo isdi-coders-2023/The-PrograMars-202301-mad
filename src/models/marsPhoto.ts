@@ -12,7 +12,7 @@ export type MarsPhotoStructure = {
   rover_landing_date: string;
   rover_launch_date: string;
   rover_status: string;
-  apiOrigin: 'APIPublic' | 'APIPrivate';
+  apiOrigin: string;
   isFavorite: boolean;
   favoriteName: string;
 };
