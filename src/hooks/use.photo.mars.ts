@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { MarsPhotoStructure } from '../models/marsPhoto';
 import { NasaApiRepo } from '../services/repository/nasa.api.repo';
 
@@ -22,6 +22,10 @@ export function usePhotos(repo: NasaApiRepo) {
       handlerError(error as Error);
     }
   }, [repo]);
+
+  useEffect(() => {
+    loadPhotos();
+  }, [loadPhotos]);
 
   return {
     photos,
