@@ -9,7 +9,7 @@ describe('Given the service Api repo class', () => {
       const repo = new NasaApiRepo();
       expect(repo).toBeInstanceOf(NasaApiRepo);
       const load = await repo.loadPhotos();
-      expect(load).toEqual({ photos: [] });
+      expect(load).toEqual([]);
     });
   });
 });
