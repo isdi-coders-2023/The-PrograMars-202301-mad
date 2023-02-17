@@ -9,10 +9,10 @@ export type MarsPhotoStructure = {
   earth_date: string;
   rover_id: number;
   rover_name: string;
-  rover_landing_date: number;
-  rover_launch_date: number;
+  rover_landing_date: string;
+  rover_launch_date: string;
   rover_status: string;
   apiOrigin: 'APIPublic' | 'APIPrivate';
-  isFavorite: false;
+  isFavorite: boolean;
   favoriteName: string;
 };
