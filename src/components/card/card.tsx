@@ -1,4 +1,5 @@
-import { SyntheticEvent } from 'react';
+import { SyntheticEvent, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { Photo } from '../../models/api';
 
 interface CardData {
@@ -6,8 +7,10 @@ interface CardData {
 }
 
 export function Card({ info }: CardData) {
+  const { actualCard } = useContext(photosContext);
   const handleClick = (ev: SyntheticEvent) => {
-    console.log('clicked');
+    actualCard(info);
+    <Link to={'/details'}>{'details'}</Link>;
   };
 
   return (

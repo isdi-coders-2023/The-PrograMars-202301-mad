@@ -26,6 +26,7 @@ export function AppRouter({ menuOptions }: AppRouterProps) {
           element={<Favorites></Favorites>}
         ></Route>
         <Route path={menuOptions[4].path} element={<About></About>}></Route>
+        <Route path={'detail'} element={ <Navigate to={'/src/pages/details/details.tsx'} }/> ></Route>
         <Route path={'/error'} element={<Error></Error>}></Route>
 
         <Route
