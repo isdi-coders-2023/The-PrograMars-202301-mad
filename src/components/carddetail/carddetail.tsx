@@ -45,10 +45,15 @@ export function CardDetail({ info }: CardDetailProps) {
           {info.isFavorite! ? (
             <i
               className="heart fa-solid fa-heart"
+              role="button"
               onClick={handleClickFavorite}
             ></i>
           ) : (
-            <i className="heart fal fa-heart" onClick={handleClickFavorite}></i>
+            <i
+              className="heart fal fa-heart"
+              role="button"
+              onClick={handleClickFavorite}
+            ></i>
           )}
         </span>
       </div>
