@@ -17,7 +17,7 @@ export function FilterMobile() {
       </label>
       <select name="camera" id={'camera-select'}>
         {cams.map((item) => (
-          <option value={item} className="filter__option">
+          <option value={item} className="filter__option" key={item}>
             {item.toUpperCase()}
           </option>
         ))}
