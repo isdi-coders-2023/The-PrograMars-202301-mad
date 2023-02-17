@@ -1,0 +1,41 @@
+{
+  "privateMarsPhotos": [
+    {
+      "id": "000001",
+      "sol": "9999",
+      "camera_id": "100",
+      "camera_name": "CANON",
+      "camera_rover_id": "10",
+      "camera_full_name": "Canon EOS 60D",
+      "img_src": "https://media.istockphoto.com/id/1224212701/es/foto/un-extraterrestre-gris-sobre-fondo-oscuro-con-trazado-de-recorte.jpg?s=612x612&w=0&k=20&c=0dIcpoFeAhsBPU2o1B4WkVRfdIcMbKP3PgIRUGRWi6g=",
+      "earth_date": "2023-02-17",
+      "rover_id": "105",
+      "rover_name": "Killed the cat",
+      "rover_landing_date": "2023-08-06",
+      "rover_launch_date": "2023-11-26",
+      "rover_status": "active",
+      "apiOrigin": "APIPrivate",
+      "isFavorite": true,
+      "favoriteName": "El marciano"
+    },
+
+    {
+      "id": "102693",
+      "sol": "1000",
+      "camera_id": "20",
+      "camera_name": "FHAZ",
+      "camera_rover_id": "5",
+      "camera_full_name": "Front Hazard Avoidance Camera",
+      "img_src": "https://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB_486265257EDR_F0481570FHAZ00323M_.JPG",
+      "earth_date": "2015-05-30",
+      "rover_id": "5",
+      "rover_name": "Curiosity",
+      "rover_landing_date": "2012-08-06",
+      "rover_launch_date": "2011-11-26",
+      "rover_status": "active",
+      "apiOrigin": "APIPublic",
+      "isFavorite": true,
+      "favoriteName": ""
+    }
+  ]
+}
