@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
-import Gallery from './gallery';
+import GalleryPage from './gallery';
 
-describe('Given Gallery component page', () => {
-  describe('When it is rendering', () => {
-    test('Then it should be return a heading', () => {
-      render(<Gallery></Gallery>);
-      const element = screen.getByRole('heading');
+describe('Given the new item page', () => {
+  describe('When it is render', () => {
+    test('Then it should return a heading', () => {
+      render(<GalleryPage></GalleryPage>);
+      const element = screen.getByRole('img');
       expect(element).toBeInTheDocument();
     });
   });

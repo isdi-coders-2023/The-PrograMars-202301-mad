@@ -1,5 +1,5 @@
 import { SyntheticEvent } from 'react';
-import { Photo } from '../../models/api.model';
+import { Photo } from '../../models/api';
 
 interface CardData {
   info: Photo;
