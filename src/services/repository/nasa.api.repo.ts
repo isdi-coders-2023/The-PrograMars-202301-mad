@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-useless-constructor */
 
-import { RootObject } from '../../models/api.model';
+import { RootObject } from '../../models/api';
 
 export interface NasaApiRepoStructure {
   loadPhotos(): Promise<RootObject>;
