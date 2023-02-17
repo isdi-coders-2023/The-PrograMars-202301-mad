@@ -31,7 +31,7 @@ export function Gallery() {
     <>
       <Filter></Filter>
       {mockNasa.photos.map((item) => (
-        <Card info={item} key={item.sol}></Card>
+        <Card info={item} key={item.id}></Card>
       ))}
     </>
   );
