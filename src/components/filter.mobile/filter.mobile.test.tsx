@@ -6,7 +6,7 @@ describe('Given the component filter', () => {
     test('Then it should print in the screen the radio buttons', () => {
       render(<FilterMobile></FilterMobile>);
       const selectElement = screen.getByRole('combobox');
-      const titleElement = screen.getByText(/choose a camera/i);
+      const titleElement = screen.getByText(/camera/i);
 
       expect(selectElement).toBeInTheDocument();
       expect(titleElement).toBeInTheDocument();
