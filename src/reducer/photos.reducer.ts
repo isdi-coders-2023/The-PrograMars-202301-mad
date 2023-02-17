@@ -6,10 +6,11 @@ export function photosReducer(
   state: MarsPhotoStructure[],
   action: Action
 ): MarsPhotoStructure[] {
-  if (action.type) {
-    rootObject.load:
+  switch (action.type) {
+    case rootObject.load:
       return action.payload as MarsPhotoStructure[];
 
-
+    default:
+      return state;
   }
 }
