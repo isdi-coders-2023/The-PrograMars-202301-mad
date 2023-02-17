@@ -1,13 +1,17 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect, useReducer } from 'react';
+import { RootObject } from '../models/api.model';
+import { MarsPhotoStructure } from '../models/marsPhoto';
+import { photosReducer } from '../reducer/photos.reducer';
 import { NasaApiRepo } from '../services/repository/nasa.api.repo';
-
-// import { MarsPhotoStructure, ProtoMarsPhotoStructure} from '../models/marsPhoto' Santiago lo está haciendo
+import * as ac from '../reducer/photos.actions.creator';
 
 export type UseMarsStructure = ReturnType<typeof usePhotos>;
-export function usePhotos(repo: NasaApiRepo) {
-  const initialState: MarsPhotoStructure[] = [];
+export function useMemo(repo: NasaApiRepo) {
+  const initialState: RootObject = {
+    photos: [],
+  };
 
-  const [photos, setPhotos] = useState(initialState);
+  const [photos, dispatch] = useReducer(photosReducer, initialState);
 
   console.log('PHOTOS: ', photos);
 
@@ -18,7 +22,7 @@ export function usePhotos(repo: NasaApiRepo) {
   const loadPhotos = useCallback(async () => {
     try {
       const photos = await repo.loadPhotos();
-      setPhotos(photos);
+      dispatch(ac.loadPhotosCreate(photos));
     } catch (error) {
       handlerError(error as Error);
     }
