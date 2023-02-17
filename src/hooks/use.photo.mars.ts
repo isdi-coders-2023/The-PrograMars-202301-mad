@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { useCallback, useReducer } from 'react';
 import { RootObject } from '../models/api.model';
+=======
+import { useState, useCallback, useEffect } from 'react';
+>>>>>>> feature/hooks
 import { MarsPhotoStructure } from '../models/marsPhoto';
 import { photosReducer } from '../reducer/photos.reducer';
 import { NasaApiRepo } from '../services/repository/nasa.api.repo';
@@ -27,6 +31,10 @@ export function usePhotos(repo: NasaApiRepo) {
       handlerError(error as Error);
     }
   }, [repo]);
+
+  useEffect(() => {
+    loadPhotos();
+  }, [loadPhotos]);
 
   return {
     photos,
