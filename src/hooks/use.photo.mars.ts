@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-import { useState, useCallback } from 'react';
-import { MarsPhotoStructure } from '../models/marsPhoto';
-import { NasaApiRepo } from '../services/repository/nasa.api.repo';
-=======
-import { useState, useCallback, useEffect, useReducer } from 'react';
+import { useCallback, useReducer } from 'react';
 import { RootObject } from '../models/api.model';
 import { MarsPhotoStructure } from '../models/marsPhoto';
 import { photosReducer } from '../reducer/photos.reducer';
 import { NasaApiRepo } from '../services/repository/nasa.api.repo';
 import * as ac from '../reducer/photos.actions.creator';
->>>>>>> feature/app-context
 
 export type UseMarsStructure = ReturnType<typeof usePhotos>;
 export function usePhotos(repo: NasaApiRepo) {
