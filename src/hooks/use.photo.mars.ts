@@ -6,7 +6,7 @@ import { NasaApiRepo } from '../services/repository/nasa.api.repo';
 import * as ac from '../reducer/photos.actions.creator';
 
 export type UseMarsStructure = ReturnType<typeof usePhotos>;
-export function useMemo(repo: NasaApiRepo) {
+export function usePhotos(repo: NasaApiRepo) {
   const initialState: RootObject = {
     photos: [],
   };
