@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
-import { usePhotos } from '';
+import { usePhotos } from '../hooks/use.photo.mars';
+
 import { NasaApiRepo } from '../services/repository/nasa.api.repo';
 import { AppContext } from './app.context';
 
