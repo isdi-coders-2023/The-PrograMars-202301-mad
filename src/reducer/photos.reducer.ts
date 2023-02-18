@@ -1,5 +1,4 @@
 import { InitialStateStructure } from '../hooks/use.photo.mars';
-import { MarsPhotoStructure } from '../models/marsPhoto';
 import { rootObject } from './photos.actions';
 import { Action } from './photos.actions.creator';
 
