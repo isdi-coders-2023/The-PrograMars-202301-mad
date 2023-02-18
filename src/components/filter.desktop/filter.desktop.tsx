@@ -1,7 +1,6 @@
 import './filter.desktop.scss';
 export function Filter() {
   const cams = ['fhaz', 'rhaz', 'mast', 'chemcam', 'mahli', 'mardi', 'navcam'];
-  let counter = 0;
 
   return (
     <fieldset className="mobile-hidden">
