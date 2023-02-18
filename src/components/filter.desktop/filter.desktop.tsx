@@ -10,7 +10,6 @@ export function Filter() {
         name="cam"
         id="lasts photos"
         value="&camera=lasts photos"
-        checked
       ></input>
       <label htmlFor="lasts photos">LASTS PHOTOS</label>
       {cams.map((item) => {
@@ -23,9 +22,7 @@ export function Filter() {
               value={'&camera=' + item}
               key={item}
             ></input>
-            <label htmlFor={item} key={item}>
-              {item.toUpperCase()}
-            </label>
+            <label htmlFor={item}>{item.toUpperCase()}</label>
           </>
         );
       })}
