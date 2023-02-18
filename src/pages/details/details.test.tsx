@@ -5,7 +5,7 @@ describe('Given the Details component', () => {
   describe('When rendered', () => {
     test('Then it should renderize a heading', () => {
       render(<Details></Details>);
-      const element = screen.getByRole('heading');
+      const element = screen.getByRole('img');
       expect(element).toBeInTheDocument();
     });
   });

@@ -16,33 +16,35 @@ export function CardDetail({ info }: CardDetailProps) {
       <picture className="cardDetail__picture">
         <img
           className="cardDetail__img"
-          src={info.img_src}
-          alt={info.camera_full_name}
+          src={info?.img_src}
+          alt={info?.camera_full_name}
         />
-        <p className="cardDetail__id-name"># {info.isFavorite.toString()}</p>
-        <p className="cardDetail__id-value">{info.id}</p>
+        <p className="cardDetail__id-name"># {info?.isFavorite.toString()}</p>
+        <p className="cardDetail__id-value">{info?.id}</p>
       </picture>
 
       <div className="cardDetail__field-name-value">
         <div className="cardDetail__field-name">Date</div>
-        <div className="cardDetail__field-value">{info.earth_date}</div>
+        <div className="cardDetail__field-value">{info?.earth_date}</div>
 
         <div className="cardDetail__field-name">Rover's name</div>
-        <div className="cardDetail__field-value">{info.rover_name}</div>
+        <div className="cardDetail__field-value">{info?.rover_name}</div>
 
         <div className="cardDetail__field-name">Launch date</div>
-        <div className="cardDetail__field-value">{info.rover_launch_date}</div>
+        <div className="cardDetail__field-value">{info?.rover_launch_date}</div>
 
         <div className="cardDetail__field-name">Landing date</div>
-        <div className="cardDetail__field-value">{info.rover_landing_date}</div>
+        <div className="cardDetail__field-value">
+          {info?.rover_landing_date}
+        </div>
 
         <div className="cardDetail__field-name">Camera</div>
-        <div className="cardDetail__field-value">{info.camera_full_name}</div>
+        <div className="cardDetail__field-value">{info?.camera_full_name}</div>
 
         <div className="cardDetail__field-name">Status</div>
-        <div className="cardDetail__field-value">{info.rover_status}</div>
+        <div className="cardDetail__field-value">{info?.rover_status}</div>
         <span className="cardDetail__favorite">
-          {info.isFavorite ? (
+          {info?.isFavorite ? (
             <i
               className="heart fal fa-heart"
               role="button"
