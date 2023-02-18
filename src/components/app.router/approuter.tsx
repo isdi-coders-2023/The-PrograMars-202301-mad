@@ -1,8 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { MenuOption } from '../app/App';
 import { lazy, Suspense } from 'react';
-import Details from '../../pages/details/details';
-import { info } from 'console';
 
 const Home = lazy(() => import('../../pages/home/home'));
 const Gallery = lazy(() => import('../../pages/gallery/gallery'));
