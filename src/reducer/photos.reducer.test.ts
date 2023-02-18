@@ -1,9 +1,12 @@
 import { photosReducer } from './photos.reducer';
-import { MarsPhotoStructure } from '../models/marsPhoto';
 import { rootObject } from './photos.actions';
+import { InitialStateStructure } from '../hooks/use.photo.mars';
 
 describe('Given the photosReducer fuction', () => {
-  const mockPhotos = [] as unknown as MarsPhotoStructure[];
+  const mockPhotos = {
+    photos: [],
+    actualPhoto: [],
+  } as InitialStateStructure;
 
   const mockloadPhotosCreator = {
     type: rootObject.load,
@@ -49,14 +52,17 @@ describe('Given the photosReducer fuction', () => {
   describe('When the action is not load', () => {
     test('Then it should returned the initial state', async () => {
       const photo = photosReducer(mockPhotos, mockloadPhotosCreator2);
-      expect(photo).toEqual([]);
+      expect(photo).toEqual(mockPhotos);
     });
   });
 
   describe('When the action is load', () => {
     test('Then it should returned the state', async () => {
       const photo = photosReducer(mockPhotos, mockloadPhotosCreator);
-      expect(photo).toEqual(mockloadPhotosCreator.payload);
+      expect(photo).toEqual({
+        ...mockPhotos,
+        photos: mockloadPhotosCreator.payload,
+      });
     });
   });
 });
