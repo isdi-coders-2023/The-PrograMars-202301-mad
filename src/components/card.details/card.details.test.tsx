@@ -15,7 +15,7 @@ describe('Given the card details component', () => {
         screen.getByRole('img'),
       ];
 
-      elements.map((item) => expect(item).toBeInTheDocument());
+      elements.forEach((item) => expect(item).toBeInTheDocument());
     });
   });
 });

@@ -13,7 +13,7 @@ export function Card({ info }: CardData) {
   const { actualCard } = useContext(PhotosContext);
   const handleClick = (ev: SyntheticEvent) => {
     actualCard({ ...info });
-    <Link to={'/details'}>{'details'}</Link>;
+    <Link to={'/details'}></Link>;
   };
 
   return (
