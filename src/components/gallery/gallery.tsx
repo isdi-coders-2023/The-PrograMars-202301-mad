@@ -12,7 +12,7 @@ export function Gallery() {
     <>
       <Filter></Filter>
       <FilterMobile></FilterMobile>
-      {state.photos.map((item: MarsPhotoStructure) => (
+      {state?.photos.map((item: MarsPhotoStructure) => (
         <Card info={item} key={item.id}></Card>
       ))}
     </>
