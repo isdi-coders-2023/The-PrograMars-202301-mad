@@ -7,7 +7,10 @@ import { PrivateApiRepo } from '../services/repository/private.api.repo';
 
 export type UseMarsStructure = ReturnType<typeof usePhotos>;
 
-type CustomHookStructure = [NasaApiRepo, PrivateApiRepo];
+type CustomHookStructure = {
+  publicRepo: NasaApiRepo;
+  privateRepo: PrivateApiRepo;
+};
 
 export type InitialStateStructure = {
   photos: [];
@@ -27,7 +30,7 @@ export function usePhotos(repo: CustomHookStructure) {
 
   const loadPhotos = useCallback(async () => {
     try {
-      const photos = await repo[0].loadPhotos();
+      const photos = await repo.publicRepo.loadPhotos();
       dispatch(loadPhotosCreator(photos));
     } catch (error) {
       handlerError(error as Error);
