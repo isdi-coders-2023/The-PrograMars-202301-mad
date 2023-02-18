@@ -1,13 +1,14 @@
 import { SyntheticEvent, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { Photo } from '../../models/api';
+import { PhotosContext } from '../../app.context/app.context';
+import { MarsPhotoStructure } from '../../models/marsPhoto';
 
 interface CardData {
-  info: Photo;
+  info: MarsPhotoStructure;
 }
 
 export function Card({ info }: CardData) {
-  const { actualCard } = useContext(photosContext);
+  const { actualCard } = useContext(PhotosContext);
   const handleClick = (ev: SyntheticEvent) => {
     actualCard(info);
     <Link to={'/details'}>{'details'}</Link>;
@@ -15,8 +16,13 @@ export function Card({ info }: CardData) {
 
   return (
     <div onClick={handleClick}>
-      <img className="mars-photo" src={info.img_src} alt={info.earth_date} />
-      <p>Camera: {info.camera.name}</p>
+      <img
+        className="mars-photo"
+        src={info.img_src}
+        alt={info.earth_date}
+        onClick={handleClick}
+      />
+      <p>Camera: {info.camera_name}</p>
       <p>#{info.id}</p>
     </div>
   );
