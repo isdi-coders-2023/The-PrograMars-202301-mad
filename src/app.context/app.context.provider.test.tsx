@@ -7,7 +7,24 @@ function TestComponent() {
   const { state } = useContext(PhotosContext);
   const initialState = {
     photos: [],
-    actualPhoto: [],
+    actualPhoto: {
+      id: 1,
+      sol: 1,
+      camera_id: 1,
+      camera_name: '',
+      camera_rover_id: 1,
+      camera_full_name: '',
+      img_src: '',
+      earth_date: '',
+      rover_id: 1,
+      rover_name: '',
+      rover_landing_date: '',
+      rover_launch_date: '',
+      rover_status: '',
+      apiOrigin: '',
+      isFavorite: false,
+      favoriteName: '',
+    },
   };
 
   if (JSON.stringify(state) === JSON.stringify(initialState)) {
