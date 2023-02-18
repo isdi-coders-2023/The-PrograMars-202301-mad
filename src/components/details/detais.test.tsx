@@ -1,18 +1,20 @@
 import { render, screen } from '@testing-library/react';
-import { MarsPhotoStructure } from '../../models/marsPhoto';
+import { PhotosContext } from '../../app.context/app.context';
+import { UseMarsStructure } from '../../hooks/use.photo.mars';
 import { Details } from './details';
 
 describe('Given the details component', () => {
   describe('When it is called', () => {
     test('Then it should the component card details', () => {
-      const mockPhotos: MarsPhotoStructure = {
-        camera_name: 'test',
-      } as MarsPhotoStructure;
+      const mockPhotos = {
+        state: 'test',
+        loadPhotos: 'hola',
+      } as unknown as UseMarsStructure;
 
       render(
-        <Testcontext.Provider value={mockPhotos}>
+        <PhotosContext.Provider value={mockPhotos}>
           <Details></Details>
-        </Testcontext.Provider>
+        </PhotosContext.Provider>
       );
       const element = screen.getByText(/test/i);
       expect(element).toBeInTheDocument();
