@@ -4,16 +4,16 @@ import './index.css';
 import App from './components/app/App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { AppContextProvider } from './app.context/app.context.provider';
+import { PhotosContextProvider } from './app.context/app.context.provider';
 
 const root = ReactDOM.createRoot(document.getElementById('app') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <AppContextProvider>
+    <PhotosContextProvider>
       <Router>
         <App />
       </Router>
-    </AppContextProvider>
+    </PhotosContextProvider>
   </React.StrictMode>
 );
 

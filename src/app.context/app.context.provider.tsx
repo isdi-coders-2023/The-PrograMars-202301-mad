@@ -5,13 +5,16 @@ import { NasaApiRepo } from '../services/repository/nasa.api.repo';
 import { PrivateApiRepo } from '../services/repository/private.api.repo';
 import { PhotosContext } from './app.context';
 
-export function AppContextProvider({ children }: { children: JSX.Element }) {
+export function PhotosContextProvider({ children }: { children: JSX.Element }) {
   const photosNasaRepo = useMemo(() => new NasaApiRepo(), []);
   const photosPrivateRepo = useMemo(() => new PrivateApiRepo(), []);
-  const hookRepos = {
-    publicRepo: photosNasaRepo,
-    privateRepo: photosPrivateRepo,
-  };
+  const hookRepos = useMemo(
+    () => ({
+      publicRepo: photosNasaRepo,
+      privateRepo: photosPrivateRepo,
+    }),
+    [photosNasaRepo, photosPrivateRepo]
+  );
 
   const context = usePhotos(hookRepos);
 

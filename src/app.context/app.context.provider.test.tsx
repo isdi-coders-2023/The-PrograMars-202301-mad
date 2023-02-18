@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { useContext } from 'react';
 import { PhotosContext } from './app.context';
-import { AppContextProvider } from './app.context.provider';
+import { PhotosContextProvider } from './app.context.provider';
 
 function TestComponent() {
   const { state } = useContext(PhotosContext);
@@ -19,9 +19,9 @@ function TestComponent() {
 describe('Given the app context provider', () => {
   test('Then it should context', () => {
     render(
-      <AppContextProvider>
+      <PhotosContextProvider>
         <TestComponent />
-      </AppContextProvider>
+      </PhotosContextProvider>
     );
 
     const element = screen.getByText(/Test ok/i);
