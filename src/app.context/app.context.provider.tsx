@@ -3,7 +3,7 @@ import { usePhotos } from '../hooks/use.photo.mars';
 
 import { NasaApiRepo } from '../services/repository/nasa.api.repo';
 import { PrivateApiRepo } from '../services/repository/private.api.repo';
-import { AppContext } from './app.context';
+import { PhotosContext } from './app.context';
 
 export function AppContextProvider({ children }: { children: JSX.Element }) {
   const photosNasaRepo = useMemo(() => new NasaApiRepo(), []);
@@ -15,5 +15,7 @@ export function AppContextProvider({ children }: { children: JSX.Element }) {
 
   const context = usePhotos(hookRepos);
 
-  return <AppContext.Provider value={context}>{children}</AppContext.Provider>;
+  return (
+    <PhotosContext.Provider value={context}>{children}</PhotosContext.Provider>
+  );
 }

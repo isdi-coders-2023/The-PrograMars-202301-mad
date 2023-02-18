@@ -1,16 +1,16 @@
 import { render, screen } from '@testing-library/react';
 import { useContext } from 'react';
-import { AppContext } from './app.context';
+import { PhotosContext } from './app.context';
 import { AppContextProvider } from './app.context.provider';
 
 function TestComponent() {
-  const { photos } = useContext(AppContext);
+  const { state } = useContext(PhotosContext);
   const initialState = {
     photos: [],
     actualPhoto: [],
   };
 
-  if (JSON.stringify(photos) === JSON.stringify(initialState)) {
+  if (JSON.stringify(state) === JSON.stringify(initialState)) {
     return <p>Test Ok</p>;
   }
   return <p>Test failed</p>;

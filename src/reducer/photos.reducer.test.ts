@@ -1,15 +1,15 @@
 import { photosReducer } from './photos.reducer';
-import { rootObject } from './photos.actions';
+import { photosCreator } from './photos.actions';
 import { InitialStateStructure } from '../hooks/use.photo.mars';
 
 describe('Given the photosReducer fuction', () => {
   const mockPhotos = {
     photos: [],
     actualPhoto: [],
-  } as InitialStateStructure;
+  } as unknown as InitialStateStructure;
 
   const mockloadPhotosCreator = {
-    type: rootObject.load,
+    type: photosCreator.load,
     payload: [
       {
         id: 1,

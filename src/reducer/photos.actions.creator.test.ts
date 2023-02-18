@@ -1,4 +1,4 @@
-import { rootObject } from './photos.actions';
+import { photosCreator } from './photos.actions';
 import { loadPhotosCreator } from './photos.actions.creator';
 
 describe('Given the photos actions creator', () => {
@@ -25,7 +25,7 @@ describe('Given the photos actions creator', () => {
         },
       ];
       const element = loadPhotosCreator(mockPhotoStructure);
-      const result = { type: rootObject.load, payload: mockPhotoStructure };
+      const result = { type: photosCreator.load, payload: mockPhotoStructure };
       expect(element).toEqual(result);
     });
   });
