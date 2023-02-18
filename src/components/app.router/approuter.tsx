@@ -14,7 +14,6 @@ type AppRouterProps = {
   menuOptions: MenuOption[];
 };
 export function AppRouter({ menuOptions }: AppRouterProps) {
-  console.log('Create AppRouter');
   return (
     <Suspense>
       <Routes>
