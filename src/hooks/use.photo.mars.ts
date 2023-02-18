@@ -55,13 +55,13 @@ export function usePhotos(repo: CustomHookStructure) {
     }
   }, [repo]);
 
-  useEffect(() => {
-    loadPhotos();
-  }, [loadPhotos]);
-
   const actualCard = useCallback((card: MarsPhotoStructure) => {
     dispatch(ac.actualCardCreator(card));
   }, []);
+
+  useEffect(() => {
+    loadPhotos();
+  }, [loadPhotos]);
 
   return {
     state,
