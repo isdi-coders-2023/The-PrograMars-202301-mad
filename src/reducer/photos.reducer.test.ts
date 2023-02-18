@@ -49,7 +49,7 @@ describe('Given the photosReducer fuction', () => {
     ],
   };
 
-  describe('When the action is not load', () => {
+  describe('When the action is not a switch case', () => {
     test('Then it should returned the initial state', async () => {
       const photo = photosReducer(mockPhotos, mockloadPhotosCreator2);
       expect(photo).toEqual(mockPhotos);
@@ -57,11 +57,21 @@ describe('Given the photosReducer fuction', () => {
   });
 
   describe('When the action is load', () => {
-    test('Then it should returned the state', async () => {
+    test('Then it should return the state updating the photos property', async () => {
       const photo = photosReducer(mockPhotos, mockloadPhotosCreator);
       expect(photo).toEqual({
         ...mockPhotos,
         photos: mockloadPhotosCreator.payload,
+      });
+    });
+  });
+
+  describe('When the action is actualCard', () => {
+    test('Then it should return the state updating the actualPhoto property', async () => {
+      const photo = photosReducer(mockPhotos, mockloadPhotosCreator);
+      expect(photo).toEqual({
+        ...mockPhotos,
+        actualPhoto: mockloadPhotosCreator.payload,
       });
     });
   });
