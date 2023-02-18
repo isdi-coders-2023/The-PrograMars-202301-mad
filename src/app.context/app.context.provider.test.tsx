@@ -5,8 +5,12 @@ import { AppContextProvider } from './app.context.provider';
 
 function TestComponent() {
   const { photos } = useContext(AppContext);
+  const initialState = {
+    photos: [],
+    actualPhoto: [],
+  };
 
-  if (photos[0] === undefined) {
+  if (JSON.stringify(photos) === JSON.stringify(initialState)) {
     return <p>Test Ok</p>;
   }
   return <p>Test failed</p>;
