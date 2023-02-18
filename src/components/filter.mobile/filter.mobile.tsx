@@ -1,3 +1,5 @@
+import './filter.mobile.scss';
+
 export function FilterMobile() {
   const cams = [
     'lasts photos',
@@ -11,7 +13,7 @@ export function FilterMobile() {
   ];
 
   return (
-    <div className="filter">
+    <div className="desktop-hidden filter">
       <label
         htmlFor={'camera-select'}
         id={'camera-select'}

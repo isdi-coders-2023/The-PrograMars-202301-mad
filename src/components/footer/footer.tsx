@@ -23,7 +23,7 @@ export function Footer() {
             </a>
           </li>
         </div>
-        <li className="footer__title">
+        <li className="footer__title mobile-hidden">
           <p>ISDI coders 2023 - NASA API</p>
         </li>
         <div>

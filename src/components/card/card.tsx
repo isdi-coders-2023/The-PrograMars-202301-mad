@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { PhotosContext } from '../../app.context/app.context';
 import { MarsPhotoStructure } from '../../models/marsPhoto';
 
+import './card.scss';
+
 interface CardData {
   info: MarsPhotoStructure;
 }
