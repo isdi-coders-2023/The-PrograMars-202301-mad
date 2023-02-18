@@ -12,7 +12,7 @@ interface CardData {
 export function Card({ info }: CardData) {
   const { actualCard } = useContext(PhotosContext);
   const handleClick = (ev: SyntheticEvent) => {
-    actualCard(info);
+    actualCard({ ...info });
     <Link to={'/details'}>{'details'}</Link>;
   };
 
