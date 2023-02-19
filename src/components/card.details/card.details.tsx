@@ -8,13 +8,12 @@ interface CardDetailProps {
 
 export function CardDetail({ info }: CardDetailProps) {
   const handleClickFavorite = (ev: SyntheticEvent) => {
-    const element = document.querySelector('.fa-heart') as HTMLElement;
-    if (element.className === 'fa-heart fa-solid') {
-      element.classList.replace('fa-solid', 'fa-regular');
-    } else {
-      element.classList.replace('fa-regular', 'fa-solid');
-    }
+    const element = document.querySelector('.fa-star') as HTMLElement;
+    element?.classList.toggle('fa-solid');
+    info.isFavorite = !info.isFavorite;
+    //TODO Add to private API
   };
+
   return (
     <article className="cardDetail">
       <picture className="cardDetail__picture">
@@ -50,7 +49,7 @@ export function CardDetail({ info }: CardDetailProps) {
         <span className="cardDetail__favorite">
           <i
             className={
-              info?.isFavorite ? 'fa-solid fa-heart' : 'fa-regular fa-heart'
+              info?.isFavorite ? 'fa-solid fa-star' : 'fa-regular fa-star'
             }
             role="button"
             onClick={handleClickFavorite}
