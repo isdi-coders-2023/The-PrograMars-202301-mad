@@ -1,29 +1,62 @@
+import './card.details.scss';
+import { SyntheticEvent } from 'react';
 import { MarsPhotoStructure } from '../../models/marsPhoto';
 
-type CardDetailsProps = {
+interface CardDetailProps {
   info: MarsPhotoStructure;
-};
+}
 
-export function CardDetails({ info }: CardDetailsProps) {
+export function CardDetail({ info }: CardDetailProps) {
+  const handleClickFavorite = (ev: SyntheticEvent) => {
+    const element = document.querySelector('.fa-heart') as HTMLElement;
+    if (element.className === 'fa-heart fa-solid') {
+      element.classList.replace('fa-solid', 'fa-regular');
+    } else {
+      element.classList.replace('fa-regular', 'fa-solid');
+    }
+  };
   return (
-    <div>
-      <div>
-        <img src={info?.img_src} alt="" />
+    <article className="cardDetail">
+      <picture className="cardDetail__picture">
+        <img
+          className="cardDetail__img"
+          src={info?.img_src}
+          alt={info?.camera_full_name}
+        />
+        <p className="cardDetail__id-name">Name: {info?.favoriteName}</p>
+        <p className="cardDetail__id-value"># {info?.id}</p>
+      </picture>
+
+      <div className="cardDetail__field-name-value">
+        <div className="cardDetail__field-name">Date</div>
+        <div className="cardDetail__field-value">{info?.earth_date}</div>
+
+        <div className="cardDetail__field-name">Rover's name</div>
+        <div className="cardDetail__field-value">{info?.rover_name}</div>
+
+        <div className="cardDetail__field-name">Launch date</div>
+        <div className="cardDetail__field-value">{info?.rover_launch_date}</div>
+
+        <div className="cardDetail__field-name">Landing date</div>
+        <div className="cardDetail__field-value">
+          {info?.rover_landing_date}
+        </div>
+
+        <div className="cardDetail__field-name">Camera</div>
+        <div className="cardDetail__field-value">{info?.camera_full_name}</div>
+
+        <div className="cardDetail__field-name">Status</div>
+        <div className="cardDetail__field-value">{info?.rover_status}</div>
+        <span className="cardDetail__favorite">
+          <i
+            className={
+              info?.isFavorite ? 'fa-solid fa-heart' : 'fa-regular fa-heart'
+            }
+            role="button"
+            onClick={handleClickFavorite}
+          ></i>
+        </span>
       </div>
-      <ul>
-        <li className="photo-property">Name</li>
-        <li className="photo-value">{info?.favoriteName}</li>
-        <li className="photo-property">Date</li>
-        <li className="photo-value">{info?.earth_date}</li>
-        <li className="photo-property">Rover's name</li>
-        <li className="photo-value">{info?.rover_name}</li>
-        <li className="photo-property">Launch date</li>
-        <li className="photo-value">{info?.rover_launch_date}</li>
-        <li className="photo-property">Land date</li>
-        <li className="photo-value">{info?.rover_landing_date}</li>
-        <li className="photo-property">Camera</li>
-        <li className="photo-value">{info?.camera_full_name}</li>
-      </ul>
-    </div>
+    </article>
   );
 }
