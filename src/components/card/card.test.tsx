@@ -7,7 +7,7 @@ import { Card } from './card';
 
 const mockPhoto = {
   id: 1,
-  sol: 1,
+  sol: 5,
   camera_id: 3,
   camera_name: 'test',
   camera_rover_id: 6,
