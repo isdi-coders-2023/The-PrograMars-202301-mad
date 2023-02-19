@@ -46,17 +46,14 @@ export function usePhotos(repo: CustomHookStructure) {
     console.log(error.message);
   };
 
-  const loadPhotos = useCallback(
-    async (page: number = 1) => {
-      try {
-        const photos = await repo.publicRepo.loadPhotos(page);
-        dispatch(loadPhotosCreator(photos));
-      } catch (error) {
-        handlerError(error as Error);
-      }
-    },
-    [repo]
-  );
+  const loadPhotos = useCallback(async () => {
+    try {
+      const photos = await repo.publicRepo.loadPhotos();
+      dispatch(loadPhotosCreator(photos));
+    } catch (error) {
+      handlerError(error as Error);
+    }
+  }, [repo]);
 
   const actualCard = useCallback((card: MarsPhotoStructure) => {
     dispatch(ac.actualCardCreator(card));
