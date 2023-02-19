@@ -25,16 +25,18 @@ describe('Given a CardDetail component', () => {
   });
 });
 
-describe('When the user clicks in a light heart (isFavorite=false)', () => {
+describe('When the user clicks in a light star (isFavorite=false)', () => {
   test('Then it should add the class fa-solid to this element by toogle', () => {
-    render(<CardDetail info={MOCK_MARSPHOTOS[0]}></CardDetail>);
+    const mockTemp = { ...MOCK_MARSPHOTOS[0] };
+    mockTemp.isFavorite = false;
+    render(<CardDetail info={mockTemp}></CardDetail>);
     const element = screen.getByRole('button');
     userEvent.click(element);
     expect(element).toHaveClass('fa-solid');
   });
 });
 
-describe('When the user clicks in a solid heart (isFavorite=true)', () => {
+describe('When the user clicks in a solid star (isFavorite=true)', () => {
   test('Then it should eliminate the class fa-solid to this element by toogle', () => {
     const mockTemp = { ...MOCK_MARSPHOTOS[0] };
     mockTemp.isFavorite = false;
@@ -42,6 +44,6 @@ describe('When the user clicks in a solid heart (isFavorite=true)', () => {
     const element = screen.getByRole('button');
     userEvent.click(element);
 
-    expect(element).toHaveClass('fa-solid fa-heart');
+    expect(element).toHaveClass('fa-solid fa-star');
   });
 });
