@@ -3,7 +3,7 @@ import { AppContext } from '../../app.context/app.context';
 import './page.button.scss';
 
 export function handleClick() {
-  const { photos, loadPhotos } = useContext(AppContext);
+  const { state, loadPhotos } = useContext(AppContext);
 
   useEffect(() => {
     loadPhotos();
