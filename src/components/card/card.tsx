@@ -17,6 +17,7 @@ export function Card({ info }: CardData) {
   const handleClickFavorite = (ev: SyntheticEvent) => {
     const element = document.querySelector('.fa-star') as HTMLElement;
     element?.classList.toggle('fa-solid');
+    element?.classList.toggle('fa-regular');
     info.isFavorite = !info.isFavorite;
   };
   return (
@@ -43,7 +44,7 @@ export function Card({ info }: CardData) {
         </Link>
         <i
           className={
-            info?.isFavorite
+            info.isFavorite
               ? 'fa-solid fa-star card__fav'
               : 'fa-regular fa-star card__fav'
           }
