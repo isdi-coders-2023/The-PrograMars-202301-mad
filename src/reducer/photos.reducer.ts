@@ -13,6 +13,9 @@ export function photosReducer(
     case photosCreator.actualCard:
       return { ...state, actualPhoto: action.payload };
 
+    case photosCreator.actualPage:
+      return { ...state, actualPage: action.payload };
+
     default:
       return state;
   }

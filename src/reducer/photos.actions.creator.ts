@@ -24,3 +24,10 @@ export const actualCardCreator = (payload: MarsPhotoStructure): Action => {
     payload,
   };
 };
+
+export const actualPageCreator = (payload: string): Action => {
+  return {
+    type: photosCreator.actualPage,
+    payload,
+  };
+};
