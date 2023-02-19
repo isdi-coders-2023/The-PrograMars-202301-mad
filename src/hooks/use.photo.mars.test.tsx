@@ -1,11 +1,10 @@
 /* eslint-disable testing-library/no-render-in-setup */
 import { NasaApiRepo } from '../services/repository/nasa.api.repo';
-import { InitialStateStructure, usePhotos } from './use.photo.mars';
+import { usePhotos } from './use.photo.mars';
 import userEvent from '@testing-library/user-event';
 import { renderHook } from '@testing-library/react';
 import { screen, render } from '@testing-library/react';
 import { PrivateApiRepo } from '../services/repository/private.api.repo';
-import { MarsPhotoStructure } from '../models/marsPhoto';
 
 describe('Given a mocked repo show in a mocked html', () => {
   let element: HTMLElement[];
