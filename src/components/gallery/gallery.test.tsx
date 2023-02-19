@@ -10,8 +10,8 @@ describe('Given Gallery component', () => {
   describe('When it is rendering', () => {
     test('Then it should be return an image', async () => {
       act(async () => {
-        const element = await screen.findByRole('img');
-        expect(element).toBeInTheDocument();
+        const element = await screen.findAllByRole('img');
+        expect(element.length).toBe(25);
       });
     });
   });

@@ -23,7 +23,7 @@ function TestComponent() {
       rover_status: '',
       apiOrigin: '',
       isFavorite: false,
-      favoriteName: '',
+      favoriteName: 'No actual Card',
     },
   };
 

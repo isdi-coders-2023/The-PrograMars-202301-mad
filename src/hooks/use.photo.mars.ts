@@ -37,7 +37,7 @@ export function usePhotos(repo: CustomHookStructure) {
       rover_status: '',
       apiOrigin: '',
       isFavorite: false,
-      favoriteName: '',
+      favoriteName: 'No actual Card',
     },
   };
   const [state, dispatch] = useReducer(photosReducer, initialState);
