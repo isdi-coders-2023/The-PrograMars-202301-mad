@@ -43,7 +43,7 @@ describe('Given AppRouter component', () => {
   });
   describe('When the route is gallery', () => {
     test('Then we should navigate to gallery', async () => {
-      const element = await screen.findByRole('img');
+      const element = await screen.findByRole('combobox');
       expect(element).toBeInTheDocument();
     });
   });
