@@ -11,6 +11,20 @@ export class PrivateApiRepo {
     const data = (await resp.json()) as MarsPhotoStructure[];
     return data;
   }
+
+  async createPrivatePhoto(
+    photo: MarsPhotoStructure
+  ): Promise<MarsPhotoStructure> {
+    const resp = await fetch(this.url, {
+      method: 'POST',
+      body: JSON.stringify(photo),
+      headers: {
+        'Content-type': 'application/json',
+      },
+    });
+    const data = (await resp.json()) as MarsPhotoStructure;
+    return data;
+  }
 }
 
 //A través de cualquier terminal, acceder a la carpeta en la que tengamos instalado el live server
