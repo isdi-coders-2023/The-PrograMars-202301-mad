@@ -1,8 +1,6 @@
 .gallery {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  &__container {
-    overflow: scroll;
-  }
+  overflow: scroll;
+  height: 32rem;
 }
