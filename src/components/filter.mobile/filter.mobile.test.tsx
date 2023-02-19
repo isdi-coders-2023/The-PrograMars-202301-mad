@@ -60,9 +60,8 @@ describe('Given the component filter', () => {
         const element = screen.getByText(/camera/i);
         expect(element).toBeInTheDocument();
         const select = screen.getByTestId('select');
-        const options = screen.getAllByRole('option');
 
-        userEvent.selectOptions(select, 'mast', options);
+        userEvent.selectOptions(select, 'mast');
         expect(mockContext.loadPhotos).toHaveBeenCalled();
       });
     });
