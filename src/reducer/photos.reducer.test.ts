@@ -1,13 +1,8 @@
 import { photosReducer } from './photos.reducer';
 import { photosCreator } from './photos.actions';
-import { InitialStateStructure } from '../hooks/use.photo.mars';
+import { mockState } from '../mocks/tests.mocks';
 
 describe('Given the photosReducer fuction', () => {
-  const mockPhotos = {
-    photos: [],
-    actualPhoto: [],
-  } as unknown as InitialStateStructure;
-
   const mockloadPhotosCreator = {
     type: photosCreator.load,
     payload: [
@@ -68,19 +63,59 @@ describe('Given the photosReducer fuction', () => {
       },
     ],
   };
+  const mockloadPhotosCreator4 = {
+    type: photosCreator.createPhoto,
+    payload: [
+      {
+        id: 2,
+        sol: 'test',
+        camera_id: 'test',
+        camera_name: 5,
+        camera_rover_id: 8,
+        camera_full_name: 'test',
+        img_src: 'test',
+        earth_date: 'test',
+        rover_id: 'test',
+        rover_name: 'test',
+        rover_landing_date: 'test',
+        rover_launch_date: 'test',
+        rover_status: 'test',
+      },
+    ],
+  };
+  const mockloadPhotosCreator5 = {
+    type: photosCreator.loadPrivate,
+    payload: [
+      {
+        id: 2,
+        sol: 'test',
+        camera_id: 'test',
+        camera_name: 5,
+        camera_rover_id: 8,
+        camera_full_name: 'test',
+        img_src: 'test',
+        earth_date: 'test',
+        rover_id: 'test',
+        rover_name: 'test',
+        rover_landing_date: 'test',
+        rover_launch_date: 'test',
+        rover_status: 'test',
+      },
+    ],
+  };
 
   describe('When the action is not a switch case', () => {
     test('Then it should returned the initial state', async () => {
-      const photo = photosReducer(mockPhotos, mockloadPhotosCreator2);
-      expect(photo).toEqual(mockPhotos);
+      const photo = photosReducer(mockState, mockloadPhotosCreator2);
+      expect(photo).toEqual(mockState);
     });
   });
 
   describe('When the action is load', () => {
     test('Then it should return the state updating the photos property', async () => {
-      const photo = photosReducer(mockPhotos, mockloadPhotosCreator);
+      const photo = photosReducer(mockState, mockloadPhotosCreator);
       expect(photo).toEqual({
-        ...mockPhotos,
+        ...mockState,
         photos: mockloadPhotosCreator.payload,
       });
     });
@@ -88,10 +123,35 @@ describe('Given the photosReducer fuction', () => {
 
   describe('When the action is actualCard', () => {
     test('Then it should return the state updating the actualPhoto property', async () => {
-      const photo = photosReducer(mockPhotos, mockloadPhotosCreator3);
+      const photo = photosReducer(mockState, mockloadPhotosCreator3);
       expect(photo).toEqual({
-        ...mockPhotos,
+        ...mockState,
         actualPhoto: mockloadPhotosCreator.payload,
+      });
+    });
+  });
+
+  describe('When the action is createPhoto', () => {
+    test('Then it should return the state updating the privatePhotos property', async () => {
+      const photo = photosReducer(mockState, mockloadPhotosCreator4);
+      const element = [
+        ...mockState.privatePhotos,
+        mockloadPhotosCreator4.payload,
+      ];
+      expect(photo).toEqual({
+        ...mockState,
+        privatePhotos: element,
+      });
+    });
+  });
+
+  describe('When the action is loadPrivate', () => {
+    test('Then it should return the state updating the privatePhotos property', async () => {
+      const photo = photosReducer(mockState, mockloadPhotosCreator5);
+      const element = [...mockloadPhotosCreator5.payload];
+      expect(photo).toEqual({
+        ...mockState,
+        privatePhotos: element,
       });
     });
   });

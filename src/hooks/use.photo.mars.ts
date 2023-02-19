@@ -16,6 +16,7 @@ type CustomHookStructure = {
 export type InitialStateStructure = {
   photos: MarsPhotoStructure[];
   actualPhoto: MarsPhotoStructure;
+  privatePhotos: MarsPhotoStructure[];
 };
 
 export function usePhotos(repo: CustomHookStructure) {
@@ -39,6 +40,7 @@ export function usePhotos(repo: CustomHookStructure) {
       isFavorite: false,
       favoriteName: 'No actual Card',
     },
+    privatePhotos: [],
   };
   const [state, dispatch] = useReducer(photosReducer, initialState);
 
@@ -46,18 +48,40 @@ export function usePhotos(repo: CustomHookStructure) {
     console.log(error.message);
   };
 
-  const loadPhotos = useCallback(async () => {
+  const loadPhotos = useCallback(
+    async (camera?: string) => {
+      try {
+        const photos = await repo.publicRepo.loadPhotos(camera);
+        dispatch(ac.loadPhotosCreator(photos));
+      } catch (error) {
+        handlerError(error as Error);
+      }
+    },
+    [repo]
+  );
+
+  const actualCard = useCallback((card: MarsPhotoStructure) => {
+    dispatch(ac.actualCardCreator(card));
+  }, []);
+
+  const loadPrivatePhotos = useCallback(async () => {
     try {
-      const photos = await repo.publicRepo.loadPhotos();
-      dispatch(ac.loadPhotosCreator(photos));
+      const photos = await repo.privateRepo.loadPrivatePhotos();
+      dispatch(ac.loadPrivatePhotosCreator(photos));
     } catch (error) {
       handlerError(error as Error);
     }
   }, [repo]);
 
-  const actualCard = useCallback((card: MarsPhotoStructure) => {
-    dispatch(ac.actualCardCreator(card));
-  }, []);
+  const createPhoto = async (photo: MarsPhotoStructure) => {
+    try {
+      photo.isFavorite = true;
+      const finalPhoto = await repo.privateRepo.createPrivatePhoto(photo);
+      dispatch(ac.createPhotoCreator(finalPhoto));
+    } catch (error) {
+      handlerError(error as Error);
+    }
+  };
 
   useEffect(() => {
     loadPhotos();
@@ -67,5 +91,7 @@ export function usePhotos(repo: CustomHookStructure) {
     state,
     loadPhotos,
     actualCard,
+    loadPrivatePhotos,
+    createPhoto,
   };
 }
