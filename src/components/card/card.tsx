@@ -22,15 +22,6 @@ export function Card({ info }: CardData) {
   return (
     <>
       <article className="card">
-        <i
-          className={
-            info?.isFavorite
-              ? 'fa-solid fa-star card__fav'
-              : 'fa-regular fa-star card__fav'
-          }
-          role="button"
-          onClick={handleClickFavorite}
-        ></i>
         <Link to={'/details'}>
           <div onClick={handleClick}>
             <img
@@ -50,6 +41,15 @@ export function Card({ info }: CardData) {
             </div>
           </div>
         </Link>
+        <i
+          className={
+            info?.isFavorite
+              ? 'fa-solid fa-star card__fav'
+              : 'fa-regular fa-star card__fav'
+          }
+          role="button"
+          onClick={handleClickFavorite}
+        ></i>
       </article>
     </>
   );

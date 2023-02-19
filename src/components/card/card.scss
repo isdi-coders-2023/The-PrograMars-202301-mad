@@ -1,4 +1,6 @@
 .card {
+  display: flex;
+  flex-direction: column;
   background-color: #0404045c;
   border-radius: 12px;
   padding: 1rem;
@@ -6,19 +8,20 @@
   line-height: 2.5rem;
   width: 90%;
   margin: 1rem 1rem;
-  position: relative;
+  box-shadow: 1px 1px 20px 1px rgb(211 211 211 / 82%);
+  a {
+    text-decoration: none;
+  }
   &__info {
     text-align: center;
-    text-decoration: none;
     color: white;
     span {
       color: #cc9f5b;
     }
   }
-  &__fav {
-    position: absolute;
-    top: 34.18rem;
-    left: 29rem;
+  i {
+    width: min-content;
+    align-self: flex-end;
     color: yellow;
   }
 }
