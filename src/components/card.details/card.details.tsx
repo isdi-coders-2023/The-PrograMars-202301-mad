@@ -9,12 +9,10 @@ interface CardDetailProps {
 export function CardDetail({ info }: CardDetailProps) {
   const handleClickFavorite = (ev: SyntheticEvent) => {
     const element = document.querySelector('.fa-heart') as HTMLElement;
-    if (element.className === 'fa-heart fa-solid') {
-      element.classList.replace('fa-solid', 'fa-regular');
-    } else {
-      element.classList.replace('fa-regular', 'fa-solid');
-    }
+    element?.classList.toggle('fa-solid');
+    info.isFavorite = !info.isFavorite;
   };
+
   return (
     <article className="cardDetail">
       <picture className="cardDetail__picture">
