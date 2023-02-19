@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react';
 import { AppContext } from '../../app.context/app.context';
 import './page.button.scss';
 
-export function galleryButtons() {
+export function GalleryButtons() {
   const { photos, loadPhotos } = useContext(AppContext);
 
   useEffect(() => {
