@@ -13,6 +13,7 @@ export function Gallery() {
     <>
       <Filter></Filter>
       <FilterMobile></FilterMobile>
+
       <main className="gallery">
         {state?.photos.map((item: MarsPhotoStructure) => (
           <Card info={item} key={item.id}></Card>

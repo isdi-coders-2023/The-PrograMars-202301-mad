@@ -14,16 +14,6 @@ export function handleClick() {
   };
   return (
     <>
-      <div onClick={handleClick}>
-        <img
-          className="mars-photo"
-          src={info.img_src}
-          alt={info.earth_date}
-          onClick={handleClick}
-        />
-        <p>Camera: {info.camera_name}</p>
-        <p>#{info.id}</p>
-      </div>
       <div className="Gallery-next-prev-buttons">
         <button
           className="next-button"
