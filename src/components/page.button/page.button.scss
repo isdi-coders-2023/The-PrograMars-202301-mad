@@ -1,18 +1,21 @@
 .Gallery-next-prev-buttons {
+  text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 7rem;
+  margin-left: 6rem;
+  gap: 2rem;
+  color: white;
 
-  &__button {
+  & button {
     border: none;
     background-color: inherit;
   }
 
-  &__img {
-    height: 60%;
-    width: 60%;
+  & img {
+    height: 20%;
+    width: 20%;
   }
 }
 
