@@ -2,7 +2,6 @@
 import { NasaApiRepo } from '../services/repository/nasa.api.repo';
 import { usePhotos } from './use.photo.mars';
 import userEvent from '@testing-library/user-event';
-import { renderHook } from '@testing-library/react';
 import { screen, render } from '@testing-library/react';
 import { PrivateApiRepo } from '../services/repository/private.api.repo';
 
@@ -50,9 +49,7 @@ describe('Given a mocked repo show in a mocked html', () => {
     };
 
     mockRepo = { loadPhotos: jest.fn() } as unknown as NasaApiRepo;
-    renderHook(() => {
-      render(<TestRepo />);
-    });
+    render(<TestRepo />);
   });
 
   describe('When user click the first button', () => {
