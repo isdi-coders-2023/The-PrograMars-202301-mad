@@ -80,6 +80,7 @@ describe('Given the Card component', () => {
     test('Then it should call handleClick', () => {
       const element = screen.getByRole('img');
       userEvent.click(element);
+      expect(mockContext.actualCard).toHaveBeenCalled();
       // Test incompleto, pendiente de testear si el click lleva al nuevo Path
     });
   });
