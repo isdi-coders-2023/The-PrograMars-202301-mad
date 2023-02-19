@@ -1,40 +1,73 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { Photo } from '../../models/api';
+import { MemoryRouter as Router } from 'react-router-dom';
+import { PhotosContext } from '../../app.context/app.context';
+import { InitialStateStructure } from '../../hooks/use.photo.mars';
 import { Card } from './card';
 
-const mockPhoto: Photo = {
-  id: 102693,
-  sol: 1000,
-  camera: {
-    id: 20,
-    name: 'FHAZ',
-    rover_id: 5,
-    full_name: 'Front Hazard Avoidance Camera',
+const mockPhoto = {
+  id: 1,
+  sol: 1,
+  camera_id: 3,
+  camera_name: 'test',
+  camera_rover_id: 6,
+  camera_full_name: 'test',
+  img_src: 'test',
+  earth_date: 'test',
+  rover_id: 1,
+  rover_name: 'test',
+  rover_landing_date: 'test',
+  rover_launch_date: 'test',
+  rover_status: 'test',
+  apiOrigin: 'APIPublic',
+  isFavorite: false,
+  favoriteName: 'test',
+};
+
+const mockState = {
+  photos: [],
+  actualPhoto: {
+    id: 1,
+    sol: 1,
+    camera_id: 1,
+    camera_name: 'test',
+    camera_rover_id: 1,
+    camera_full_name: '',
+    img_src:
+      'https://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB_486265257EDR_F0481570FHAZ00323M_.JPG',
+    earth_date: '',
+    rover_id: 1,
+    rover_name: '',
+    rover_landing_date: '',
+    rover_launch_date: '',
+    rover_status: '',
+    apiOrigin: '',
+    isFavorite: false,
+    favoriteName: '',
   },
-  img_src:
-    'https://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB_486265257EDR_F0481570FHAZ00323M_.JPG',
-  earth_date: '2015-05-30',
-  rover: {
-    id: 5,
-    name: 'Curiosity',
-    landing_date: '2012-08-06',
-    launch_date: '2011-11-26',
-    status: 'active',
-  },
+} as InitialStateStructure;
+
+const mockContext = {
+  state: mockState,
+  loadPhotos: jest.fn(),
+  actualCard: jest.fn(),
 };
 
 describe('Given the Card component', () => {
   beforeEach(() => {
-    jest.spyOn(console, 'log');
-
     // eslint-disable-next-line testing-library/no-render-in-setup
-    render(<Card info={mockPhoto}></Card>);
+    render(
+      <Router>
+        <PhotosContext.Provider value={mockContext}>
+          <Card info={mockPhoto}></Card>
+        </PhotosContext.Provider>
+      </Router>
+    );
   });
   describe('When called', () => {
     test('Then it should renderize a card component', () => {
       const element = screen.getByRole('img');
-      const element2 = screen.getByText(/FHAZ/i);
+      const element2 = screen.getByText(/test/i);
       expect(element).toBeInTheDocument();
       expect(element2).toBeInTheDocument();
     });
@@ -44,7 +77,7 @@ describe('Given the Card component', () => {
     test('Then it should call handleClick', () => {
       const element = screen.getByRole('img');
       userEvent.click(element);
-      expect(console.log).toHaveBeenCalled();
+      // Test incompleto, pendiente de testear si el click lleva al nuevo Path
     });
   });
 });

@@ -2,8 +2,9 @@ import { useCallback, useReducer, useEffect } from 'react';
 import { photosReducer } from '../reducer/photos.reducer';
 import { NasaApiRepo } from '../services/repository/nasa.api.repo';
 
-import { loadPhotosCreator } from '../reducer/photos.actions.creator';
+import * as ac from '../reducer/photos.actions.creator';
 import { PrivateApiRepo } from '../services/repository/private.api.repo';
+import { MarsPhotoStructure } from '../models/marsPhoto';
 
 export type UseMarsStructure = ReturnType<typeof usePhotos>;
 
@@ -13,16 +14,33 @@ type CustomHookStructure = {
 };
 
 export type InitialStateStructure = {
-  photos: [];
-  actualPhoto: [];
+  photos: MarsPhotoStructure[];
+  actualPhoto: MarsPhotoStructure;
 };
 
 export function usePhotos(repo: CustomHookStructure) {
   const initialState: InitialStateStructure = {
     photos: [],
-    actualPhoto: [],
+    actualPhoto: {
+      id: 1,
+      sol: 1,
+      camera_id: 1,
+      camera_name: '',
+      camera_rover_id: 1,
+      camera_full_name: '',
+      img_src: '',
+      earth_date: '',
+      rover_id: 1,
+      rover_name: '',
+      rover_landing_date: '',
+      rover_launch_date: '',
+      rover_status: '',
+      apiOrigin: '',
+      isFavorite: false,
+      favoriteName: '',
+    },
   };
-  const [photos, dispatch] = useReducer(photosReducer, initialState);
+  const [state, dispatch] = useReducer(photosReducer, initialState);
 
   const handlerError = (error: Error) => {
     console.log(error.message);
@@ -31,18 +49,23 @@ export function usePhotos(repo: CustomHookStructure) {
   const loadPhotos = useCallback(async () => {
     try {
       const photos = await repo.publicRepo.loadPhotos();
-      dispatch(loadPhotosCreator(photos));
+      dispatch(ac.loadPhotosCreator(photos));
     } catch (error) {
       handlerError(error as Error);
     }
   }, [repo]);
+
+  const actualCard = useCallback((card: MarsPhotoStructure) => {
+    dispatch(ac.actualCardCreator(card));
+  }, []);
 
   useEffect(() => {
     loadPhotos();
   }, [loadPhotos]);
 
   return {
-    photos,
+    state,
     loadPhotos,
+    actualCard,
   };
 }

@@ -1,23 +1,36 @@
 .footer {
   color: black;
-  background-color: inherit;
+  background-color: rgba($color: #000000, $alpha: 0.6);
   padding: 0.1rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &__img {
-    height: 1rem;
+    width: fit-content;
+    max-height: 1rem;
   }
 
   &__ul {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 2rem;
+    gap: 1rem;
 
     div {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.4rem;
+      justify-content: flex-start;
+      gap: 0.1rem;
+    }
+    li {
+      max-width: 20px;
+      max-height: 20px;
+      a {
+        display: flex;
+        align-content: center;
+        max-width: 20px;
+        max-height: 20px;
+      }
     }
   }
 }

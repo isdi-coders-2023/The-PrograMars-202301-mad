@@ -1,11 +1,14 @@
 .cardDetail {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: row;
-  width: 160px;
+  max-width: 250px;
   border: 1px solid black;
   box-shadow: 1px 1px 20px 1px #d3d3d3d1;
   border-radius: 10px;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  margin: 2rem;
+  font-size: 1.5rem;
 
   &__picture {
     display: flex;
@@ -27,27 +30,29 @@
   &__field-name,
   &__id-name {
     color: #cc9f5b;
-    font-size: 0.3rem;
+    font-size: 0.8rem;
   }
   &__field-value,
   &__favorite,
   &__id-value {
-    color: black;
-    font-size: 0.3rem;
+    color: white;
+    font-size: 0.6rem;
     text-transform: capitalize;
   }
 
   &__id-name,
   &__id-value {
+    font-size: 0.8rem;
+
     text-align: center;
   }
 }
 
-.heart {
-  position: relative;
-  top: -95px;
-  right: 20px;
-  font-size: 0.4rem;
+.fa-heart {
+  position: absolute;
+  top: 190px;
+  left: 220px;
+  font-size: 1rem;
   cursor: pointer;
   color: red;
 }
