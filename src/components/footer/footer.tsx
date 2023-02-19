@@ -5,15 +5,6 @@ export function Footer() {
       <ul className="footer__ul">
         <div>
           <li>
-            <a rel="nofollow" href="https://twitter.com/ISDICoders">
-              <img
-                className="footer__img"
-                src="assets/img/logo-twitter.svg"
-                alt="Logo to link to the ISDI Coders's Twitter page"
-              ></img>
-            </a>
-          </li>
-          <li>
             <a rel="nofollow" href="https://isdicoders.com/">
               <img
                 className="footer__img"
@@ -33,15 +24,6 @@ export function Footer() {
                 className="footer__img"
                 src="assets/img/logo-NASA.svg"
                 alt="Logo to link to the NASA API REST page"
-              ></img>
-            </a>
-          </li>
-          <li>
-            <a rel="nofollow" href="https://twitter.com/opennasa?lang=en">
-              <img
-                className="footer__img"
-                src="assets/img/logo-twitter.svg"
-                alt="Logo to link to the Open NASA's Twitter page"
               ></img>
             </a>
           </li>

@@ -1,6 +1,12 @@
 .gallery {
   display: flex;
   flex-direction: column;
-  overflow: scroll;
-  height: 32rem;
+  align-items: center;
+
+  &__list {
+    overflow: scroll;
+    height: 32rem;
+    overflow-x: hidden;
+    max-width: 20.5rem;
+  }
 }

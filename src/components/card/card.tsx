@@ -15,7 +15,7 @@ export function Card({ info }: CardData) {
     actualCard({ ...info });
   };
   const handleClickFavorite = (ev: SyntheticEvent) => {
-    const element = document.querySelector('.fa-star') as HTMLElement;
+    const element = ev.target as HTMLElement;
     element?.classList.toggle('fa-solid');
     element?.classList.toggle('fa-regular');
     info.isFavorite = !info.isFavorite;
