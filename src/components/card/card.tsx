@@ -13,19 +13,20 @@ export function Card({ info }: CardData) {
   const { actualCard } = useContext(PhotosContext);
   const handleClick = (ev: SyntheticEvent) => {
     actualCard({ ...info });
-    <Link to={'/details'}></Link>;
   };
 
   return (
-    <div onClick={handleClick}>
-      <img
-        className="mars-photo"
-        src={info.img_src}
-        alt={info.earth_date}
-        onClick={handleClick}
-      />
-      <p>Camera: {info.camera_name}</p>
-      <p>#{info.id}</p>
-    </div>
+    <Link to={'/details'}>
+      <div onClick={handleClick}>
+        <img
+          className="mars-photo"
+          src={info.img_src}
+          alt={info.earth_date}
+          onClick={handleClick}
+        />
+        <p>Camera: {info.camera_name}</p>
+        <p>#{info.id}</p>
+      </div>
+    </Link>
   );
 }
