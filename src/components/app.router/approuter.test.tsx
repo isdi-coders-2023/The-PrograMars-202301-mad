@@ -10,6 +10,7 @@ const mockOptions: MenuOption[] = [
   { label: 'New Item', path: '/new-item' },
   { label: 'Favorites', path: '/favorites' },
   { label: 'About', path: '/about' },
+  { label: 'Details', path: '/details' },
   { label: 'Error', path: '/error' },
 ];
 
@@ -25,6 +26,7 @@ describe('Given AppRouter component', () => {
           '/new-item',
           '/favorites',
           '/about',
+          '/details',
           '/error',
           '/abc',
         ]}
@@ -64,6 +66,12 @@ describe('Given AppRouter component', () => {
       const element = await screen.findByRole('heading', {
         name: 'About',
       });
+      expect(element).toBeInTheDocument();
+    });
+  });
+  describe('When the route is details', () => {
+    test('Then we should navigate to details', async () => {
+      const element = await screen.findByRole('img');
       expect(element).toBeInTheDocument();
     });
   });

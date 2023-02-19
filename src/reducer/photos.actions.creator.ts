@@ -29,7 +29,7 @@ export const loadPrivatePhotosCreator = (
   payload: MarsPhotoStructure[]
 ): Action => {
   return {
-    type: photosCreator.load,
+    type: photosCreator.loadPrivate,
     payload,
   };
 };
