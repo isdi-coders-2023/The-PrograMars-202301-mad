@@ -41,6 +41,7 @@ describe('When the user clicks in a solid heart (isFavorite=true)', () => {
     render(<CardDetail info={mockTemp}></CardDetail>);
     const element = screen.getByRole('button');
     userEvent.click(element);
-    expect(element).not.toHaveClass('fa-solid');
+
+    expect(element).toHaveClass('fa-solid fa-heart');
   });
 });
