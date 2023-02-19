@@ -75,6 +75,7 @@ export function usePhotos(repo: CustomHookStructure) {
 
   const createPhoto = async (photo: MarsPhotoStructure) => {
     try {
+      photo.isFavorite = true;
       const finalPhoto = await repo.privateRepo.createPrivatePhoto(photo);
       dispatch(ac.createPhotoCreator(finalPhoto));
     } catch (error) {
