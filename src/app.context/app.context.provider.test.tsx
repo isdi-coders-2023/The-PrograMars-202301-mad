@@ -25,6 +25,7 @@ function TestComponent() {
       isFavorite: false,
       favoriteName: 'No actual Card',
     },
+    privatePhotos: [],
   };
 
   if (JSON.stringify(state) === JSON.stringify(initialState)) {

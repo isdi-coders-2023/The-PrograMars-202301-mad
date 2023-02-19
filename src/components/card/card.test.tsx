@@ -45,12 +45,15 @@ const mockState = {
     isFavorite: false,
     favoriteName: '',
   },
+  privatePhotos: [],
 } as InitialStateStructure;
 
 const mockContext = {
   state: mockState,
   loadPhotos: jest.fn(),
   actualCard: jest.fn(),
+  loadPrivatePhotos: jest.fn(),
+  createPhoto: jest.fn(),
 };
 
 describe('Given the Card component', () => {

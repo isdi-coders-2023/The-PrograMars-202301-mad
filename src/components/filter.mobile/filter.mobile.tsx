@@ -1,6 +1,15 @@
+import { SyntheticEvent, useContext } from 'react';
+import { PhotosContext } from '../../app.context/app.context';
 import './filter.mobile.scss';
 
 export function FilterMobile() {
+  const { loadPhotos } = useContext(PhotosContext);
+
+  const handleClick = (ev: SyntheticEvent) => {
+    const element = ev.target as HTMLFormElement;
+    loadPhotos('&camera=' + element.value);
+  };
+
   const cams = [
     'lasts photos',
     'fhaz',
@@ -22,7 +31,12 @@ export function FilterMobile() {
       >
         Camera:
       </label>
-      <select name="camera" id={'camera-select'} className="filter__options">
+      <select
+        name="camera"
+        id={'camera-select'}
+        className="filter__options"
+        onChange={handleClick}
+      >
         {cams.map((item) => (
           <option value={item} className="filter__option" key={item + 'select'}>
             {item.toUpperCase()}
