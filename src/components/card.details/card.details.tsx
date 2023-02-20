@@ -11,7 +11,6 @@ export function CardDetail({ info }: CardDetailProps) {
     const element = document.querySelector('.fa-star') as HTMLElement;
     element?.classList.toggle('fa-solid');
     info.isFavorite = !info.isFavorite;
-    //TODO Add to private API
   };
 
   return (
