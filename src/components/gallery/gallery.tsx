@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { PhotosContext } from '../../app.context/app.context';
+import { PhotosContext } from '../../context/photos.context';
 import { Card } from '../../components/card/card';
 import { Filter } from '../../components/filter.desktop/filter.desktop';
 import { MarsPhotoStructure } from '../../models/marsPhoto';

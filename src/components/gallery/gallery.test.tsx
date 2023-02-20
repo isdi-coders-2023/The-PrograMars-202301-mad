@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { act } from 'react-dom/test-utils';
-import { PhotosContext } from '../../app.context/app.context';
+import { PhotosContext } from '../../context/photos.context';
 import { mockContext } from '../../mocks/tests.mocks';
 import Gallery from '../../pages/gallery/gallery';
 
