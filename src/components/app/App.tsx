@@ -13,7 +13,6 @@ const menuOptions: MenuOption[] = [
   { label: 'Gallery', path: '/gallery' },
   { label: 'New Item', path: '/new-item' },
   { label: 'Favorites', path: '/favorites' },
-  { label: 'About', path: '/about' },
 ];
 
 function App() {

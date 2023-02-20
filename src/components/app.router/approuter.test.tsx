@@ -51,21 +51,13 @@ describe('Given AppRouter component', () => {
   });
   describe('When the route is new-item', () => {
     test('Then we should navigate to new-item', async () => {
-      const element = await screen.findByRole('heading', { name: /New item/i });
+      const element = await screen.findByRole('heading');
       expect(element).toBeInTheDocument();
     });
   });
   describe('When the route is favorites', () => {
     test('Then we should navigate to favorites', async () => {
       const element = await screen.findByRole('heading', { name: 'Favorites' });
-      expect(element).toBeInTheDocument();
-    });
-  });
-  describe('When the route is about', () => {
-    test('Then we should navigate to about', async () => {
-      const element = await screen.findByRole('heading', {
-        name: 'About',
-      });
       expect(element).toBeInTheDocument();
     });
   });

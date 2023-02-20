@@ -1,5 +1,4 @@
 .cardDetail {
-  position: relative;
   display: flex;
   flex-direction: row;
   max-width: 250px;
@@ -49,9 +48,8 @@
 }
 
 .fa-star {
-  position: absolute;
-  top: 190px;
-  left: 220px;
+  width: min-content;
+  align-self: flex-end;
   font-size: 1rem;
   cursor: pointer;
   color: yellow;
