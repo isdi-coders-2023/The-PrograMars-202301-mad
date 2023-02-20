@@ -35,7 +35,7 @@ export function FilterMobile() {
         name="camera"
         id={'camera-select'}
         className="filter__options"
-        data-testId="select"
+        data-testid="select"
         onChange={handleClick}
       >
         {cams.map((item) => (
