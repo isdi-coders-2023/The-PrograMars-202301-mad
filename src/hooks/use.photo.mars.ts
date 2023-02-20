@@ -16,7 +16,6 @@ type CustomHookStructure = {
 export type InitialStateStructure = {
   photos: MarsPhotoStructure[];
   actualPhoto: MarsPhotoStructure;
-  actualPage: string;
 };
 
 export function usePhotos(repo: CustomHookStructure) {
@@ -40,7 +39,6 @@ export function usePhotos(repo: CustomHookStructure) {
       isFavorite: false,
       favoriteName: 'No actual Card',
     },
-    actualPage: '1',
   };
   const [state, dispatch] = useReducer(photosReducer, initialState);
 
@@ -48,21 +46,20 @@ export function usePhotos(repo: CustomHookStructure) {
     console.log(error.message);
   };
 
-  const loadPhotos = useCallback(async () => {
-    try {
-      const photos = await repo.publicRepo.loadPhotos();
-      dispatch(ac.loadPhotosCreator(photos));
-    } catch (error) {
-      handlerError(error as Error);
-    }
-  }, [repo]);
+  const loadPhotos = useCallback(
+    async (camera?: string) => {
+      try {
+        const photos = await repo.publicRepo.loadPhotos(camera);
+        dispatch(ac.loadPhotosCreator(photos));
+      } catch (error) {
+        handlerError(error as Error);
+      }
+    },
+    [repo]
+  );
 
   const actualCard = useCallback((card: MarsPhotoStructure) => {
     dispatch(ac.actualCardCreator(card));
-  }, []);
-
-  const actualPage = useCallback((page: string) => {
-    dispatch(ac.actualPageCreator(page));
   }, []);
 
   useEffect(() => {
@@ -73,6 +70,5 @@ export function usePhotos(repo: CustomHookStructure) {
     state,
     loadPhotos,
     actualCard,
-    actualPage,
   };
 }

@@ -14,7 +14,7 @@ export class NasaApiRepo {
   url: string;
   constructor() {
     this.url =
-      'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=3120&page=1';
+      'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=3728&page=1';
   }
 
   async loadPhotos(camera?: string): Promise<MarsPhotoStructure[]> {

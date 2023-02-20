@@ -10,11 +10,17 @@ export function photosReducer(
     case photosCreator.load:
       return { ...state, photos: action.payload };
 
+    case photosCreator.loadPrivate:
+      return { ...state, privatePhotos: action.payload };
+
     case photosCreator.actualCard:
       return { ...state, actualPhoto: action.payload };
 
     case photosCreator.actualPage:
       return { ...state, actualPage: action.payload };
+    case photosCreator.createPhoto:
+      const photos = [...state.privatePhotos, action.payload];
+      return { ...state, privatePhotos: photos };
 
     default:
       return state;
