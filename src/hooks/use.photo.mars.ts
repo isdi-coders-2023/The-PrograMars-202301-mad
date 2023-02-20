@@ -85,7 +85,8 @@ export function usePhotos(repo: CustomHookStructure) {
 
   useEffect(() => {
     loadPhotos();
-  }, [loadPhotos]);
+    loadPrivatePhotos();
+  }, [loadPhotos, loadPrivatePhotos]);
 
   return {
     state,
