@@ -4,6 +4,7 @@ import { Card } from '../../components/card/card';
 import { Filter } from '../../components/filter.desktop/filter.desktop';
 import { MarsPhotoStructure } from '../../models/marsPhoto';
 import { FilterMobile } from '../filter.mobile/filter.mobile';
+import { PageButtons } from '../page.button/page.button';
 import './gallery.scss';
 
 export function Gallery() {
@@ -18,6 +19,7 @@ export function Gallery() {
           <Card info={item} key={item.id}></Card>
         ))}
       </main>
+      <PageButtons></PageButtons>
     </>
   );
 }

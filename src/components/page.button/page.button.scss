@@ -1,0 +1,31 @@
+.Gallery-next-prev-buttons {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 4.5rem;
+  gap: 1rem;
+  color: white;
+
+  & button {
+    border: none;
+    background-color: inherit;
+  }
+
+  & img {
+    height: 20%;
+    width: 20%;
+  }
+}
+
+// MediaQuery for desktop
+// @media screen {
+//   .Gallery-next-prev-buttons {
+//     gap: 14rem;
+//     &__img {
+//       height: 60%;
+//       width: 60%;
+//     }
+//   }
+// }

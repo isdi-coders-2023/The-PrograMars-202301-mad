@@ -16,6 +16,8 @@ export function photosReducer(
     case photosCreator.actualCard:
       return { ...state, actualPhoto: action.payload };
 
+    case photosCreator.actualPage:
+      return { ...state, actualPage: action.payload };
     case photosCreator.createPhoto:
       const photos = [...state.privatePhotos, action.payload];
       return { ...state, privatePhotos: photos };
