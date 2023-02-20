@@ -14,11 +14,14 @@ export class NasaApiRepo {
   url: string;
   constructor() {
     this.url =
-      'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=3728&page=1';
+      'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=3728';
   }
 
-  async loadPhotos(camera?: string): Promise<MarsPhotoStructure[]> {
-    const resp = await fetch(this.url + camera + apiKey);
+  async loadPhotos(
+    camera?: string,
+    page: string = '&page=1'
+  ): Promise<MarsPhotoStructure[]> {
+    const resp = await fetch(this.url + camera + page + apiKey);
     const data = (await resp.json()) as RootObject;
     const marsPhoto = data.photos.map((item) => ({
       id: item.id,
