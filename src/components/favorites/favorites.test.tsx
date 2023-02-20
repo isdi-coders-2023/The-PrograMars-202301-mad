@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react';
-import FavoritesPage from './favorites';
+import { Favorites } from './favorites';
 
-describe('Given the favorites page', () => {
+describe('Given the favorites component', () => {
   describe('When it is render', () => {
     test('Then it should return a heading', () => {
-      render(<FavoritesPage></FavoritesPage>);
+      render(<Favorites></Favorites>);
       const element = screen.getByRole('heading');
       expect(element).toBeInTheDocument();
     });

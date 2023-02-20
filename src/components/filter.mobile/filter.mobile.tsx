@@ -1,5 +1,5 @@
 import { SyntheticEvent, useContext } from 'react';
-import { PhotosContext } from '../../app.context/app.context';
+import { PhotosContext } from '../../context/photos.context';
 import './filter.mobile.scss';
 
 export function FilterMobile() {

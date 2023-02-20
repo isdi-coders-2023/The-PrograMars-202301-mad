@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter as Router } from 'react-router-dom';
-import { PhotosContext } from '../../app.context/app.context';
+import { PhotosContext } from '../../context/photos.context';
 import { mockContext } from '../../mocks/tests.mocks';
 import { Card } from './card';
 

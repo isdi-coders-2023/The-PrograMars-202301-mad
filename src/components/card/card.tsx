@@ -1,6 +1,6 @@
 import { SyntheticEvent, useContext } from 'react';
 import { Link } from 'react-router-dom';
-import { PhotosContext } from '../../app.context/app.context';
+import { PhotosContext } from '../../context/photos.context';
 import { MarsPhotoStructure } from '../../models/marsPhoto';
 
 import './card.scss';

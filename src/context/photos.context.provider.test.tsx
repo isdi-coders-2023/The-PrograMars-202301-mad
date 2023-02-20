@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { useContext } from 'react';
-import { PhotosContext } from './app.context';
-import { PhotosContextProvider } from './app.context.provider';
+import { PhotosContext } from './photos.context';
+import { PhotosContextProvider } from './photos.context.provider';
 
 function TestComponent() {
   const { state } = useContext(PhotosContext);

@@ -1,7 +1,7 @@
 /* eslint-disable testing-library/no-render-in-setup */
 import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { PhotosContext } from '../../app.context/app.context';
+import { PhotosContext } from '../../context/photos.context';
 import { mockContext } from '../../mocks/tests.mocks';
 import { FilterMobile } from './filter.mobile';
 

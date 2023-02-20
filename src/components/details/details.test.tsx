@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { PhotosContext } from '../../app.context/app.context';
+import { PhotosContext } from '../../context/photos.context';
 import { mockContext } from '../../mocks/tests.mocks';
 import { Details } from './details';
 

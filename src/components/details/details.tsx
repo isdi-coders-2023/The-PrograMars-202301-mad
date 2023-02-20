@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { PhotosContext } from '../../app.context/app.context';
+import { PhotosContext } from '../../context/photos.context';
 import { CardDetail } from '../card.details/card.details';
 
 export function Details() {
